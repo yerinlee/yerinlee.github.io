@@ -1607,7 +1607,7 @@ div.page-figure.in-content {padding: 0 15px;}
   }
   .work-gallery img{transition: 0.5s;}
   .work-gallery a:hover img{transform: scale(1.2);}
-  .work-gallery ul{padding: 50px 50px 0 0;}
+  .work-gallery ul{padding: 50px 40px 0 0;}
   .work-gallery ul li{padding-bottom: 15px; padding-right: 5px;}
   .work-gallery ul li:nth-child(7), .work-gallery ul li:nth-child(8),
   .work-gallery ul li:nth-child(9), .work-gallery ul li:nth-child(10),
