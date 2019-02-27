@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VOGUE</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="shortcut icon" href="img/vogue.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/jquery.scrollbar.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>
+</head>
+<body>
+
+<!-- header -->
+  <header>
+    <div class="top-area">
+      <h1><a href="#" class="logo"><img src="img/logo.jpg" alt="vogue"></a></h1>
+      <!-- 모바일 메뉴 아이콘 -->
+      <h2 class="blind">메뉴</h2>
+      <input type="checkbox" id="btn-menu" title="btn-menu">
+      <label for="btn-menu" class="btn-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <button class="btn-search"><i class="icon icon-search1"></i><span class="blind">검색창</span></button>
+      <!-- 검색창 -->
+      <div class="search-form">
+        <form action="#">
+          <input type="text" placeholder="Search" title="검색창">
+          <button type="submit"><i class="icon icon-search2"></i><span class="blind">검색</span></button>
+        </form>
+      </div>
+    </div>
+    <!--메뉴 -->
+    <nav>
+      <div class="user-info">
+        <i class="icon icon-profile"></i>로그인이 필요합니다.
+        <a href="#login-popup">구독하기<i class="icon icon-next1"></i></a>
+      </div>
+      <ul class="gnb">
+        <li><a href="#">FASHION</a></li>
+        <li><a href="#">BEAUTY</a></li>
+        <li><a href="#">LIVING</a></li>
+        <li><a href="#">PEOPLE</a></li>
+        <li><a href="#">VIDEO</a></li>
+        <li><a href="#">RUNWAY</a></li>
+        <li class="addmenu"><a href="#">VOGUE MARKET</a></li>
+      </ul>
+      <div class="info-bottom">
+        <img src="img/banner.png" alt="ad">
+        <ul>
+          <li><a href="#">회사소개</a> |
+              <a href="#"> 광고 및 제휴</a> |
+              <a href="#"> 공지사항</a> |
+              <a href="#"> 개인정보 처리방침</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- /end header -->
+
+  <!-- 메인 -->
+  <section>
+    <article class="main">
+      <h2 class="blind">메인사진</h2>
+      <div class="text-box">
+        <div class="text">
+          <h3>Givenchy<br>Spring 2019</h3>
+          <p>지방시의 아티스틱 디렉터, 클레어 웨이트켈러가 선보이는 화려하면서 자유분방한 지방시만의 강렬한 화보.</p>
+        </div>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><span class="blind">Givenchy Men-Spring 2019 상세페이지</span></a></div>
+          <div class="swiper-slide"><a href="#"><span class="blind">Chanel SPRING 2019 상세페이지</span></a></div>
+          <div class="swiper-slide"><a href="#"><span class="blind">Prada 2019 상세페이지</span></a></div>
+          <div class="swiper-slide"><a href="#"><spna class="blind">Dior Spring 2019 상세페이지</spna></a></div>
+          <div class="swiper-slide"><a href="#"><span class="blind">Gucci Spring 2019 상세페이지</span></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"><i class="icon icon-right"></i></div>
+        <div class="swiper-button-prev"><i class="icon icon-left"></i></div>
+      </div>
+    </article>
+
+    <div class="category-nav">
+      <ul>
+        <li><a href="#fashion" class="active">Fashion</a></li>
+        <li><a href="#beauty">Beauty</a></li>
+        <li><a href="#living">Living</a></li>
+      </ul>
+    </div>
+
+    <!-- 패션 -->
+    <article class="fashion tap-nav">
+      <h2><a href="#">Fashion<i class="icon icon-more"></i></a></h2>
+      <div class="contents active" id="fashion">
+        <ul class="row">
+          <li class="col-xs-12 col-sm-6 col-md-4">
+            <div class="img-wrap bg1">
+              <div class="over">
+                <h3>Enrique Vega의 화보<i class="icon icon-arrow1"></i></h3>
+                <p>이탈리아 베니스를 배경으로 촬영 한 Enrique Vega의 패션화보.
+                   화려함은 기본! 다양한 패션과 메이크업 엿보기.
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+          <li class=" col-xs-12 col-sm-6 col-md-4" >
+            <div class="img-wrap bg2">
+              <div class="over">
+                <h3>Spring 2019 Menswear<i class="icon icon-arrow1"></i></h3>
+                <p>Dior Homme과 Louis Vuitton, 2019 년 봄 신사복
+                   시즌의 빅 데뷔, 낭만적 인 꽃 무늬 프린트와 양복의 만남.
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+          <li class="col-xs-12 col-sm-12 col-md-4">
+            <div class="img-wrap bg3">
+              <div class="over">
+                <h3>Gucci Spring 2019 <i class="icon icon-arrow1"></i></h3>
+                <p>파리에서 개최되는 여성과 남성의 봄 ​​여름 2019 컬렉션.
+                  복고감성과 화려한 원색의 만남.
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+          <li class="col-xs-12 col-sm-12">
+            <div class="img-wrap bg4">
+              <div class="over">
+                <h3>Women Suit <i class="icon icon-arrow1"></i></h3>
+                <p>회색 체크 재킷과 팬츠는 유돈 초이(Eudon Choi),
+                  이너로 입은 화이트 셔츠는 김서룡(Kimseoryong), 슈즈는 루이 비통(Louis Vuitton).
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+          <li class="col-xs-12 col-sm-12">
+            <div class="img-wrap bg5">
+              <div class="over">
+                <h3>New Nomad <i class="icon icon-arrow1"></i></h3>
+                <p>꽃무늬 실크 셔츠와 재킷, 레깅스와 주름치마는 구찌(Gucci),
+                  컬러 블록 샌들과 손에 든 마드라스 체크 패턴 토트백은 포츠 1961(Ports 1961)
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+          <li class="col-xs-12 col-sm-12">
+            <div class="img-wrap bg6">
+              <div class="over">
+                <h3>Hanbokn in Praha<i class="icon icon-arrow1"></i></h3>
+                <p>프라하와 한복의 만남,
+                   TRUE COLORS 화려한 골드 스팽글 저고리와 모본단 보라색 치마
+                </p>
+                <a href="#">자세히 보기</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-more">+ View More</button>
+      </div>
+    </article>
+
+  <!-- 뷰티 -->
+    <article class="beauty tap-nav">
+      <h2><a href="#">Beauty<i class="icon icon-more"></i></a></h2>
+      <div class="contents" id="beauty">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap beauty1">
+              <a href="#type1">
+                <p>올해의 컬러 리빙코랄, 메이크업<i class="icon icon-more"></i></p>
+              </a>
+            </div>
+            <div class="wrap beauty2">
+              <a href="#type2">
+                <p>필라테스를 하면 얻을 수 있는 효과 6가지<i class="icon icon-more"></i></p>
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap beauty3">
+              <a href="#type3">
+                <p>메이크업 '신상템' 엿보기<i class="icon icon-more"></i></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="btn-more">+ View More</button>
+      </div>
+    </article>
+
+  <!-- 리빙 -->
+    <article class="living tap-nav">
+      <h2><a href="#">Living<i class="icon icon-more"></i></a></h2>
+      <div class="contents" id="living">
+        <ul class="row">
+          <li class="col-md-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="img/living1.png" alt="Travel">
+              </div>
+              <div class="col-sm-6 text-box scrollbar-inner">
+                <h3>“당신의 여행가방”</h3>
+                <p>기다리고 기다린 여행이라면 짐 싸는 것조차 신난다.여행의 순간을 함께할 연인도
+                  필요하지만,나를 위해 묵묵히 봉사할 짐꾼은 필수. 바로 여행용 캐리어다.올여름엔
+                  어떤 캐리어를 선택해야 할까?<br><br>
+                  “열심히 일한 당신, 떠나라!”란 오래된 광고 문구를 실행에 옮길 때가 또다시 찾아왔다.
+                  멋쟁이들이 리프레시 휴가를 맘껏 누리려면 여행지와 목적에 맞는 스타일링이 필수이듯,
+                  어떤 여행용 캐리어를 준비하냐에 따라 여행의 ‘질’도 좌우된다. 게다가 여행용
+                  캐리어는 한번 구입하면 오래 써야 하는 만큼 조목조목 따질 것이 많다. 잦은 출장과
+                  여행을 경험하며 터득한 짐싸기 노하우라면? 캐리어는 무조건 가볍고 튼튼하며 수납
+                  공간이 많아야 한다는 것.</p>
+                <span class="more">그런데 플라스틱이나 알루미늄 같은 하드 케이스는 튼튼하지만
+                  무겁다는 단점이 있다. 또 캔버스나 폴리아미드 등으로 만든 소프트 케이스는
+                  가볍지만 내구성이 염려된다. 게다가 최근 몇몇 트렁크의 손잡이에서 1급 발암
+                  물질이 검출됐다는 소식은 실로 충격적일 수밖에. 또 몇십 만원 혹은 몇백 만원을
+                  호가하는 프리미엄 제품이 반드시 튼튼한 것만은 아니라는 보도가 이어지며 캐리어
+                  선택에도 고민이 뒤따르고 있다.
+                </span>
+                <a href="#">더보기 ></a>
+              </div>
+            </div>
+          <li class="col-md-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="img/living2.png" alt="Trave2">
+              </div>
+              <div class="col-sm-6 text-box scrollbar-inner">
+                <h3>“눈에 띄는 책”</h3>
+                <p><b>[회사 다닐 때보다 괜찮습니다]</b><br>
+                    브랜딩으로 먹고 살던 광고 기획자 원부연은 ‘우주의 술기운’ 으로 원부술집,
+                    모어댄위스키, 하루키술집 등을 연이어 냈다. 저자는 “창업에도 철저한 브랜딩이
+                    필요 하다”고 말한다. 프랜차이즈가 아닌 내 브랜드 가게로 살아남는 노하우다.<br><br>
+                <b>[우아한 밤과 고양이들]</b><br>
+                    “말로 규정하지 않고 침묵으로 환기하는 스타일” (문학평론가 신형철)이라는 평에
+                    걸맞은 손보미의 두 번째 소설집이다. 헤어진 여자 친구의 집에 침입하는 고양이를
+                    퇴치하러 떠나는 남자의 이야기 ‘무단 침입한 고양이들’ , 갑자기 눈물이 멈추지 않는
+                    사건을 다룬 ‘고양이의 보은 : 눈물의 씨앗’ 등 알알이 고양이처럼 매력적이다.
+                  </p>
+                  <span class="more">
+                    <b>[N.E.W]</b><br>
+                      김사과는 문단의 낯선 충격이었다가 예민한 시선이 되었다. 2013년 <천국에서>
+                      이후 5년 만에 발표한 장편 가 증거다. “제가 드리고 싶은 말은요, 새로운 시대엔
+                      새로운 시대에 맞는 거짓말이 필요하다는 거예요. 새로운 세계에 걸맞은 환상이요.”<br><br>
+                    <b>[썅년의 미학]</b><br>
+                       누적 400만 뷰를 돌파한 민서영 작가의 웹툰 ‘쌍년의 미학’과 저자의
+                      ‘사이다 칼럼’을 단행본으로 엮었다. 대한민국 여성으로서 누구나 한 번은 겪었을
+                      불편한 순간을 통쾌하게 긁는다.
+                  </span>
+                <a href="#">더보기 ></a>
+                <button class="icon icon-more2"><span class="blind">펼치기</span></button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-more">+ View More</button>
+      </div>
+    </article>
+  </section>
+<!-- /end section  -->
+
+
+<!-- footer -->
+  <footer>
+      <img src="img/logo_white.png" alt="vogue" class="logo">
+      <ul class="menu">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">광고 및 제휴</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">개인정보 처리방침</a></li>
+      </ul>
+      <!-- 언어선택 -->
+      <div class="lang">
+        <h2 class="blind">언어선택</h2>
+        <div class="flag">
+          <button><i class="icon icon-world"></i>Language<i class="icon icon-down"></i></button>
+          <ul class="language">
+            <li><i class="icon icon-korea"></i> SOUTH KOREA</li>
+            <li><i class="icon icon-japan"></i> JAPAN</li>
+            <li><i class="icon icon-china"></i> CHINA</li>
+            <li><i class="icon icon-usa"></i> U.S.A</li>
+            <li><i class="icon icon-france"></i> FRANCE</li>
+          </ul>
+        </div>
+      </div>
+    <!-- sns 아이콘 -->
+      <div class="sns">
+        <h2 class="blind">sns</h2>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/VOGUEkr" target="_blank" class="icon icon-facebook" title="페이스북">
+              <span class="blind">페이스북</span></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/VogueKorea" target="_blank" class="icon icon-twitter" title="트위터">
+              <span class="blind">트위터</span></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/VOGUEKOREA/" target="_blank" class="icon icon-instagram" title="인스타그램">
+              <span class="blind">인스타그램</span></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/VogueKorea" target="_blank" class="icon icon-youtube" title="유튜브">
+              <span class="blind">유투브</span></a>
+          </li>
+          <li>
+            <a href="https://story.kakao.com/ch/voguekr" target="_blank" class="icon icon-kakaostory" title="카카오스토리">
+              <span class="blind">카카오스토리</span></a>
+          </li>
+        </ul>
+      </div>
+
+  <!-- 사이트 정보 -->
+      <p>WWW.VOGUE.COM ⓒONDENAST ASIA PACIFIC. INC. ALL RIGHTS RESERVED.
+              VOGUE.COM KOREA IS OPERATED BY DOOSAN MAGAZINE.
+      </p>
+  </footer>
+<!--/end footer  -->
+  <a href="#" class="icon icon-top"><span class="blind">top버튼</span></a>
+
+<!-- 로그인팝업 -->
+  <div id="login-popup">
+    <h2 class="blind">로그인</h2>
+    <button class="btn-toggle"><i class="icon icon-heart"></i><span>구독하기</span></button>
+    <div class="wrap">
+      <form action="#">
+        <span class="login">LOGIN</span>
+      <!-- 아이디 -->
+        <div class="id">
+          <label for="id"><span class="blind">아이디</span></label>
+          <input type="text" placeholder="Id" id="id" title="id">
+        </div>
+      <!-- 비밀번호 -->
+        <div class="password">
+          <label for="password"><span class="blind">비밀번호</span></label>
+          <input type="password" placeholder="Password" id="password">
+        </div>
+      <!-- 체크박스 -->
+        <div class="checkbox">
+          <label><input type="checkbox" title="아이디체크"><i class="fas fa-check-square"></i>아이디 저장</label>
+          <label><input type="checkbox"title="자동로그인"><i class="fas fa-check-square"></i>자동로그인</label>
+        </div>
+        <button id="btn-submit" type="submit">로그인</button>
+      </form>
+      <div class="row">
+        <a href="#">아이디찾기</a>  |  <a href="#">비밀번호찾기</a>  |  <a href="#">회원가입</a>
+      </div>
+      <!-- sns간편로그인 -->
+      <div class="sns-login">
+        <h3>SNS 간편로그인</h3>
+        <ul>
+          <li><a href="#" class="icon icon-naver">
+            <span class="blind">네이버</span></a>
+          </li>
+          <li><a href="#" class="icon icon-facebook1">
+            <span class="blind">페이스북</span></a>
+          </li>
+          <li><a href="#" class="icon icon-google">
+            <span class="blind">구글</span></a>
+          </li>
+          <li><a href="#" class="icon icon-kakao">
+            <span class="blind">카카오톡</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- /end 로그인 창 -->
+
+<!-- 로그인 완료 후 마이페이지 -->
+  <div id="my-page-popup">
+    <h2 class="blind">마이페이지</h2>
+    <button class="btn-toggle"><i class="icon icon-heart"></i><span>스토리</span></button>
+
+    <div class="wrap">
+      <button id="btn-logout"><i class="icon icon-logout"></i><span>로그아웃</span></button>
+      <div class="user-info">
+        <i class="icon icon-profile"></i><span>vog_10님</span>
+        <button>회원정보수정</button>
+      </div>
+
+      <ul class="tab-menu">
+        <li><a href="#tab1" class="active">관심분야</a></li>
+        <li><a href="#tab2">구독내역</a></li>
+        <li><a href="#tab3">포인트</a></li>
+        <li><a href="#tab4">쿠폰</a></li>
+      </ul>
+      <div class="tab-contents">
+        <div id="tab1" class="active">저장된 관심 키워드가 없습니다.</div>
+        <div id="tab2">메뉴2 내용입니다.</div>
+        <div id="tab3">메뉴3 내용입니다.</div>
+        <div id="tab4">메뉴4 내용입니다.</div>
+      </div>
+    <!-- 고객센터 -->
+      <div class="service">
+        <div class="title">고객센터 <span>상담시간 09:00 ~ 18:00(월~금, 공휴일 제외)</span>
+        </div>
+        <div class="btn-group">
+          <button><i class="icon icon-write"></i>1:1 문의하기</button>
+          <button><i class="icon icon-list"></i> 문의내역</button>
+        </div>
+        <div class="title">FAQ<a href="#">보기 > </a></div>
+      </div>
+    </div>
+  </div>
+<!-- /end 로그인 완료페이지 -->
+
+<!--팝업창1(뷰티) -->
+  <div id="beauty-popup">
+    <h2 class="blind">뷰티 팝업창</h2>
+    <div class="wrap"><img src="img/pop_logo.png" alt="vogue" class="logo"></div>
+    <i class="icon icon-close2"></i>
+    <div id="type3" class="type3">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="col-sm-6 left bg1"></div>
+            <div class="right col-sm-6">
+              <div class="text-box scrollbar-inner">
+                <h3>스타 릿 아이 팔레트 라이트 캐쳐 섀도우</h3>
+                <p>무엇 하나 버릴 컬러 없이 두고두고 유용하게 쓸 수 있는 리미티드 아이 팔레트.
+                  데일리 음영 메이크업부터 홀리데이 무드까지 다양하게 연출할 수 있다.
+                  매트, 메탈, 크롬처럼 텍스처도 다양해 질릴 틈이 없다. 스타 릿
+                  아이 팔레트 라이트 캐쳐 섀도우, 6만9천원, <b>Make Up For Ever.</b></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="left col-sm-6 bg2"></div>
+            <div class="right col-sm-6">
+              <div class="text-box scrollbar-inner">
+                <h3>데코르테 마르셀 반더스 컬렉션 페이스 파우더 2018</h3>
+                <p>2011년부터 진행해 온 네덜란드 디자이너 마르셀 반더스와의 여덟 번째 컬렉션.
+                  도자기를 연상시키는 모자이크 패턴부터 콤팩트를 여는 순간 섬세하게
+                  조각된 여성의 아름다움까지, 마르셀 반더스의 작품을 소장하는
+                  자체만으로도 의미 있다. 데코르테 마르셀 반더스 컬렉션 페이스 파우더
+                  2018, 파우더 2개입, 30만원, <b>Decorte.</b></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="left col-sm-6 bg3"></div>
+            <div class="right col-sm-6">
+              <div class="text-box scrollbar-inner">
+                <h3> V 컷 파운데이션 브러시 822</h3>
+                <p>양옆으로 날렵하게 커팅된 브러시라 파운데이션을 완벽하게 피부에 밀착시킨다.
+                  얼굴 윤곽을 따라 바르기도 편하고 촘촘하고 빼곡한 모가 매우 부드러워 자극 없는
+                  메이크업이 가능하다. V 컷 파운데이션 브러시 822, 1만3천원, <b>Fillimilli.</b></p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="left col-sm-6 bg4"></div>
+            <div class="right col-sm-6">
+              <div class="text-box scrollbar-inner">
+                <h3>쎄시 볼륨 마스카라</h3>
+                <p>마스카라만 발라도 눈매가 확 살아난다는 말을 증명한다. 땅콩처럼 생긴
+                  커브 브러시로 속눈썹을 빈틈없이 채워 볼륨을 높여준다. 길이는 길지만 숱이
+                  부족한 이들에게 머스트 해브 아이템이 돼줄 것. 쎄시 볼륨 마스카라,
+                  블랙, 1만7천원, <b>Celebeau.</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">NEXT<i class="icon icon-next2"></i></div>
+        <div class="swiper-button-prev">PREV<i class="icon icon-prev"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="type2" class="type2">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-wrap bg1"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>1. 점진적인 체중 감소</h3>
+              <p>필라테스는 에너지의 소비를 관장하는 신진대사를 활성화한다. 신진대사의
+                속도가 빠라지면 체온이 올라가면서 땀이 나고 칼로리가 소비된다. 이렇게 천천히 체중을 감량할 수 있다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrap bg2"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>2. 부상 없는 근육 단련</h3>
+              <p>필라테스는 근육을 강화하고 저항을 높이는 좋은 근력 운동이다. 필라테스의 기구와
+                동작들은 몸의 여러 가지 근육을 대상으로 하며 여느 스포츠와는 다르게 상, 하체의
+                균형을 맞추면서 운동할 수 있다. 필라테스의 큰 장점 중 하나는 부상을 방지할 수 있다는 점이다.
+                필라테스는 본인의 몸무게나 가벼운 도구만을 사용하기 때문이다. 필라테스에서 쓰이는
+                도구로는 고무 밴드, 여러 크기의 짐볼 등이 있다. 근력 운동과 심혈관계 운동의
+                사이에서 몸의 균형을 잘 유지할 수 있으며, 요요 없는 체중 감량을 위한
+                제일 건강하고 효과적인 방법이다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrap bg3"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>3. 몸매를 잡아준다</h3>
+              <p>서서히 체중이 감량되고 근육이 생기면 몸매가 살아난다. 근육은 더 이상 커지지 않고,
+                윤곽이 돋보이기 시작한다. 이와 동시에 스트레칭으로 얻은 유연성은 실루엣을 돋보이게 한다.
+                몸의 근육을 다루다보면 자기 자신에 대해 더 잘 알게 된다. 만약 여러분이
+                여성이라면 몸에는 탄탄한 굴곡이 생길 것이다. 남성의 경우에는 상, 하체에
+                균형 잡힌 뚜렷한 근육을 얻을 수 있다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrap bg4"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>4. 바른 자세</h3>
+              <p>앞서 언급했듯이, 필라테스는 바른 자세를 만들어준다.1)복부 근육 강화는 굽은 등을 펴준다.
+                2)아래 등이 탄탄하면 허리를 안전하게 지지해줄 수 있다.
+                3)강한 다리와 엉덩이는 온몸을 지탱하는 데에 필요하다.
+                이를 통해 몸 전체가 균형을 잡고 효율적으로 기능하게 된다. 어떻게 보면
+                필라테스는 우리 몸을 총체적으로 변화시킨다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrap bg5"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>5. 유연성 증가</h3>
+              <p>필라테스는처음부터 끝까지 유연성과 스트레칭을 포함하고, 근육 강화 기법들과 통합된다.
+                양질의 스트레칭은 근육이 종합적으로 사용되기 위해 꼭 필요한 단계다. 무슨 일이 있어도,
+                스트레칭을 과소평가하지 말자. 스트레칭을 계속 하면 몸의 유연성이 점차 늘어나는 것이
+                느껴진다. 몸이 유연하면 부상과 근육, 관절 문제를 사전에 예방할 수 있다.
+                또한 평소에 바른 자세를 유지하는 데도 도움이 되고, 어느 운동을 하더라도
+                정자세로 하는 습관이 든다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-wrap bg6"></div>
+            <div class="text-box scrollbar-inner">
+              <h3>6. 스트레스 감소</h3>
+              <p>필라테스는 체중 감량과 근육 단련에만 효과가 있는 것이 아니라 전반적인 몸을 가꾸게 해준다.
+                신체 운동을 하면 신경계가 안정되는 효과를 얻을 수 있다. 운동을 통해 우리는 스트레스와 불안,
+                우울증과 같은 문제들을 완화할 수 있는 것이다. 특히 필라테스는 높은 집중과 협응을 필요로 한다.
+                이 두 가지에 집중하다보면 머리를 비우고 내 속을 채웠던 근심과 걱정을 잠시 잊을 수 있다.
+                필라테스를 하는 동안 마음은 오직 몸, 균형, 힘, 호흡의 작용에 집중하게 된다.
+                따라서 필라테스는 스트레스를 낮출 수 있는 강력한 도구가 된다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">NEXT<i class="icon icon-next2"></i></div>
+        <div class="swiper-button-prev">PREV<i class="icon icon-prev"></i></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="type1" class="type1">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="left col-sm-6 bg1"></div>
+            <div class="right col-sm-6">
+              <div class="img-wrap"><img src="img/pop1_1s.png" alt=""></div>
+              <div class="text-box scrollbar-inner">
+                <h3>올해의 컬러 리빙코랄과 함께!</h3>
+                <p><b>'2019년 올해의 컬러'</b>로 선정된 <b>'리빙 코랄'</b>은 크게 두가지 의미를 담고 있다.
+                  리빙코랄이 주는 따뜻함이 현대인들에게 편안함과 활력을 주며 사람과 사람
+                  사이의 포용력을 담고 있다고 한다. 또 리빙코랄이 선정되기까지 가장 큰
+                  영향을 준 건 산호초라고 하는데, 산호초에서 영감을 받아 부드러운 외연을
+                  갖추어 더욱 생기 넘치고 발랄한 황금빛의 코랄 색조로 탄생되었다.
+                  리빙 코랄은 모든 피부 색조를 보완해주는 <b>생동감 있는 컬러</b>로
+                  아이, 립 메이크럽, 블러셔 등 뷰티제품에 사용되면 자연스러운 아름다움을 줄 수 있다.
+                  그렇다면 메이크업과 일상 생활에서 만나볼 수 있는 코랄 대표 제품은 무엇이 있을까? 확인해보자.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="left col-sm-6 bg2"></div>
+              <div class="right col-sm-6">
+                <div class="img-wrap"><img src="img/pop1_2s.png" alt=""></div>
+                <div class="text-box scrollbar-inner">
+                  <h3>프레쉬 슈거 립 트리트먼트 SPF 15</h3>
+                  <p>뛰어난 보습 효과의 슈가(Sugar), 영양을 공급해주는 귀한 오일 성분들,
+                    SPF 차단 성분 혼합물을 함유하고 있어 입술을 촉촉하고 매끄럽게 가꾸어 준다.
+                    다양한 컬러의 슈가 립 트리트먼트 중에서도 쥬이시한 레드 코랄 틴트가 올해의
+                    색상의 영향을 받아 베스트 셀러로 자리 매김하였다.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="left col-sm-6 bg3"></div>
+                <div class="right col-sm-6">
+                  <div class="img-wrap"><img src="img/pop1_3s.png" alt=""></div>
+                  <div class="text-box scrollbar-inner">
+                    <h3>나스 블러쉬</h3>
+                    <p>생생한 색감과 부드러운 파두어 질감에서 오는 지속력으로 하루 종일
+                      자연스럽고 생기 넘치는 혈색을 연출하는 머스트 해브 아이템이자 메이크업
+                      전문 브랜드 나스의 시그니처이기도 하다. 위트 있는 컬러명 덕분에 유명세를 타기도했다.
+                      블러셔 부문에서 어워드 워너를 차지한 나스의 블러쉬 임패션드는 은은한
+                      핑크 오키드 컬러로 한국 여성들에게 특히 인기를 끌고 있다.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="left col-sm-6 bg4" ></div>
+                  <div class="right col-sm-6">
+                    <div class="img-wrap"><img src="img/pop1_4s.png" alt=""></div>
+                    <div class="text-box scrollbar-inner">
+                      <h3>TATOUAGE COUTURE LIQUID MATTE LIP STAIN</h3>
+                      <p>Tattoo YSL의 Tatouage Couture는 입술에 아름답고 울트라 매트 한 느낌을 준다.
+                        입술에 미끄러지 듯이 발라지기 때문에 실제로는 발랐다는 느낌이 들지 않는다.
+                        완벽한 누드, 광택있는 분홍색으로 나를 뽑내라. 주걱 모양의 틴트 브러쉬는
+                        라이너의 정밀도를 제공하여 모든 용도에 맞게 제작된 입술 용 브러시이다.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="left col-sm-6 bg5"></div>
+                    <div class="right col-sm-6">
+                      <div class="img-wrap"><img src="img/pop1_5s.png" alt=""></div>
+                      <div class="text-box scrollbar-inner">
+                        <h3>리빙 코랄 제품</h3>
+                        <p><b>1 랑콤</b> 압솔
+                          뤼 루즈 드라마 마뜨. #157 수지 네온코랄, 3.4g, 4만2천원대.
+                          <b>2 디올 루즈</b> 디올 더블 루즈. #546 버블 검, 3.5g, 4만2천원대.
+                          <b>3 맥</b> 버시컬러 바니쉬 크림 립 스테인. #트라이 투 스탑 미,8.5ml, 3만4천원.
+                          <b>4 에스티로더</b> 퓨어 컬러 디자이어 립스틱. #301 아웃스마트, 3.1g, 4만5천원대.
+                          <b>5 메이크업포에버</b> 아티스트 립 블러쉬. #300 파우더리 코랄, 2.5g, 3만1천원.
+                          <b>6 네이처리퍼블릭</b> 컬러 앤 네이처 네일 컬러. #22 탱고 블라썸, 8ml, 3천원.
+                          <b>7 나스</b> 리퀴드 블러쉬. #토리드, 15ml, 4만원.
+                          <b>8 맥</b> 미네랄라이즈 블러쉬. #헤이 코랄 헤이, 4g, 3만7천원.
+                          <b>9샤넬</b>  루쥬 알뤼르 리퀴드 파우더 마뜨. #950 플레져, 9ml, 4만5천원.
+                          <b>10 VDL</b> 엑스퍼트 컬러 아이북 6.4 넘버 8. 9.6g, 4만8천원.
+                          <b>11 디어달리아</b> 파라다이스 드림 벨벳 립 무스. #레이디버그, 6.5ml, 2만6천원.
+                          <b>12 시슬리</b> 휘또 립 트위스트. #7, 2.5g, 4만8천원.
+                          <b>13 메이크업포에버</b> 아티스트 페이스 컬러. #B-110, 리필 5g, 2만9천원대. (팔레트 9천원대)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next">NEXT<i class="icon icon-next2"></i></div>
+                  <div class="swiper-button-prev">PREV<i class="icon icon-prev"></i></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+    </body>
+</html>
