@@ -3,7 +3,7 @@ $(function() {
         var index = 0,
             count = 0;
         var word = '';
-        var words = ["Graphic", "Branding", "Package", "Edit design ","web design"];
+        var words = ["Graphic", "Branding", "Package", "Edit design ","Web design","web publishing"];
         untype();
 
         function type(word) {
@@ -38,7 +38,7 @@ $(function() {
         }
 
         function nextWord() {
-            index = count % 5;
+            index = count % 6;
             count++;
             word = words[index].split('');
             type(word);
