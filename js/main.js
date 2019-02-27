@@ -66,9 +66,9 @@ $(function() {
           //btn-more
          $('.work-gallery ul li:lt(3)').show();
            var items =  18;
-           var shown =  3;
+           var shown =  2;
            $('.btn-more').click(function () {
-               shown = $('.work-gallery ul li:visible').length+3;
+               shown = $('.work-gallery ul li:visible').length+2;
                if(shown< items) {
                  $('.work-gallery ul li:lt('+shown+')').show(300);
                } else {
