@@ -59,6 +59,8 @@ html {
 .icon-js{width: 70px; height: 70px; background-position: -700px -0px;  margin: 20px 30px 0;}
 .icon-jquery{width: 70px; height: 70px; background-position: -0px -100px;  margin: 20px 30px 0;}
 .icon-next{width: 35px; height: 35px; background-position: -200px -100px; margin-left: 5px; margin-top: 5px;}
+.icon-next{width: 35px; height: 35px; background-position: -100px -100px; margin-left: 5px; margin-top: 5px; display: none;}
+
 
 
 /* Typography ================================================================*/
