@@ -1617,24 +1617,7 @@ div.page-figure.in-content {padding: 0 15px;}
   .work-gallery ul li:nth-child(17), .work-gallery ul li:nth-child(18){display: none;}
   .work-gallery ul li a{display: block; position: relative; border-radius: 5px; overflow: hidden;}
   .work-gallery ul li a:hover::after{opacity: 1;}
-  /* .item_open{
-    visibility: visible;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    +transition(all, 0.4s, ease-in-out);
-    }
-  .open{position: absolute; left: : -134%;} */
   .btn-more{left: 50%; transform: translateX(-50%);}
-
-  /* .portfolioContainer{overflow: hidden;} */
-  /* .filter-item{margin-right: 20px; border-radius: 54px; border: 2px solid #fff; padding: 5px 40px;}
-  .filter-item.active{background:#fff; color: #222; border-radius: 54px; padding: 5px 40px; border: 2px solid #fff;} */
-  /* .description{background: #ccc;
-    height: 100%; width: 100%;
-    position: absolute; top: 0; left: 0; display: none;} */
-
-
-
 
 
   /* Contacts ==================================================================*/
