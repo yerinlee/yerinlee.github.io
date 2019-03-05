@@ -59,7 +59,7 @@ html {
 .icon-js{width: 70px; height: 70px; background-position: -700px -0px;  margin: 20px 30px 0;}
 .icon-jquery{width: 70px; height: 70px; background-position: -0px -100px;  margin: 20px 30px 0;}
 .icon-next{width: 35px; height: 35px; background-position: -200px -100px; margin-left: 5px; margin-top: 5px; cursor: pointer;}
-.icon-menu{width: 35px; height: 35px; background-position: -100px -100px; display: none; position: absolute; top: 5px; left: 2px;}
+.icon-menu{width: 35px; height: 35px; background-position: -100px -100px; display: none; position: absolute; top: 5px; left: 3px;}
 
 
 
@@ -1230,7 +1230,7 @@ div.page-figure.in-content {padding: 0 15px;}
 
 }
 @media screen and (max-width: 767px) {
-  .cospo-page{min-width: 100%; padding-bottom: 60px;}
+  .cospo-page{min-width: 100%;}
   .ajax-content {margin: 0 -15px; padding: 0;}
   .page-figure figcaption {padding: 0 15px;}
   .page-title {padding: 1px 25px; }
@@ -1384,9 +1384,12 @@ div.page-figure.in-content {padding: 0 15px;}
   text-align: center;
   height: 136px;
   border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+  border-right: 1px rgba(255, 255, 255, 0.1) solid;
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+.brand-table .cell:nth-child(3), .brand-table .cell:nth-child(6), .brand-table .cell:nth-child(9){border-right: none;}
 
 .brand-table .cell span{display: block; font-size: 18px; font-weight: 600;}
 
@@ -1399,10 +1402,7 @@ div.page-figure.in-content {padding: 0 15px;}
 
 }
 @media screen and (min-width: 768px) {
-  .brand-table .cell {
-    width: 33.3333%;
-    border-right: 1px rgba(255, 255, 255, 0.1) solid;
-  }
+
 
   .brand-table .cell:nth-last-child(1), .brand-table .cell:nth-last-child(2),
   .brand-table .cell:nth-last-child(3) {border-bottom: 0;}
@@ -1429,6 +1429,7 @@ div.page-figure.in-content {padding: 0 15px;}
     border-radius:54px;
     font-weight: 600;
     margin-right: 20px;
+    margin:15px 0;
   }
   .btn-link a:hover{color: #222; background: #fff; border: 2px solid #fff;}
   .portfolio-page .title{display: none;}
@@ -1469,14 +1470,17 @@ div.page-figure.in-content {padding: 0 15px;}
   .aside-menu.icons li a.loading:before {background-size: contain;}
 
   @media (max-width:767px) {
-    .portfolio-page{height: 100%;}
+    .portfolio-page{ padding: 60px 0;}
     .portfolio-page .title{display: block;}
     .portfolio-page .title h2{ margin-left: 20px;}
     .portfolio-page .page-title{display: none !important; }
     .btn-link{padding: 0;}
     .btn-link a{display: block; margin-right: 0;}
     .tab-contents article{border-bottom: 0px;}
-    .work-gallery ul{padding: 50px 35px 0 10px;}
+    .tab-contents article:nth-child(2){display: none;}
+    .tab-contents p{font-size: 14px;}
+    .tab-contents h4, .tab-contents span{font-size: 16px; font-weight: 600;}
+    .work-gallery ul{padding: 50px 20px 0 10px;}
   }
   @media (min-width: 992px) and (max-width: 1050px) {
     .aside-menu.icons li a {width: 70px;  height: 70px;  line-height: 70px;}
@@ -1606,7 +1610,7 @@ div.page-figure.in-content {padding: 0 15px;}
 
   /* work-gallery */
 
-  .work-gallery{position: relative; overflow: hidden;}
+  .work-gallery{position: relative; }
   .work-gallery ul li a::after{
     content: '';
     position: absolute;
@@ -1708,8 +1712,6 @@ div.page-figure.in-content {padding: 0 15px;}
 @media screen and (min-width: 992px) {
   body, html { overflow: hidden;}
   main {height: 100%; position: relative; z-index: 1; overflow: hidden;}
-  .container-fluid {padding-left: 17px; padding-right: 17px;}
-
   .col-lg-1,
   .col-lg-2,
   .col-lg-3,
@@ -1743,9 +1745,7 @@ div.page-figure.in-content {padding: 0 15px;}
 }
 
 /* Large device */
-@media screen and (min-width: 1281px) {
-  .container-fluid {padding-left: 24px; padding-right: 24px;}
-}
+
 
 .ajax-menu .gallery li a {
   -webkit-transition: opacity 0.2s ease;
@@ -1959,11 +1959,10 @@ ul.gallery-services.aside-menu li a.loading:before {content: '';}
 
 @media screen and (min-width: 992px) {
   .page-title {padding-left: 40px;}
-  .cospo-page, .sign-in-page {
+  .cospo-page {
     width: 69.375%;
     height: inherit;
     display: inline-block;
-    overflow: hidden;
     opacity: 0;
     visibility: hidden;
     position: absolute;

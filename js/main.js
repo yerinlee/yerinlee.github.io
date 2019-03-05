@@ -76,18 +76,18 @@ $(function() {
                }
             });
 
+            $('.tab-contents article:lt(3)').show();
+              var items =  3;
+              var shown =  1;
+              $('.btn-more').click(function () {
+                  shown = $('.tab-contents article:visible').length+1;
+                  if(shown< items) {
+                    $('.tab-contents article:lt('+shown+')').show(300);
+                  } else {
+                    $('.tab-contents article:lt('+items+')').show(300);
+                  }
+               });
 
-            // var portfolioContainer=$('.portfolioContainer').isotope({
-            //   itemSelector:'.item'
-            // })
-            // $('.filter-item ').on('click',function(){
-            //   $('.filter-item ').removeClass('active');
-            //   $(this).addClass('active');
-            //   var selector=$(this).attr('data-filter');
-            //   portfolioContainer.isotope({
-            //     filter:selector
-            //   })
-            // })
 
 
 });
