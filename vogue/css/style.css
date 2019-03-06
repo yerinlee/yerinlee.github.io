@@ -353,10 +353,7 @@
     position: absolute; top: 20px; left: 20px; width: 140px;
   }
   footer .flag ul{position:absolute; bottom: 30px; display: none;}
-  footer .flag ul li{
-    border-bottom: 1px solid #ccc; line-height: 30px; padding: 0 8px;
-    background: #222222; color: #ccc;
-  }
+  footer .flag ul li{line-height: 30px; padding: 0 8px; background: #222222; color: #ccc;}
   footer .flag ul li:hover{background: #fff; color: #222222; font-weight: 600; cursor: pointer;}
   footer .flag button{color: #ccc; width: 100%; height: 30px;}
   footer p{
