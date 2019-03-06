@@ -3,7 +3,7 @@ $(function() {
         var index = 0,
             count = 0;
         var word = '';
-        var words = ["Graphic", "Branding", "Package", "Edit design ","Web design","web publishing"];
+        var words = ["Graphic", "Branding", "Package", "Edit design ","Web design","Web publishing"];
         untype();
 
         function type(word) {
@@ -65,7 +65,7 @@ $(function() {
 
           //btn-more
          $('.work-gallery ul li:lt(3)').show();
-           var items =  18;
+           var items =  12;
            var shown =  2;
            $('.btn-more').click(function () {
                shown = $('.work-gallery ul li:visible').length+2;
@@ -76,17 +76,25 @@ $(function() {
                }
             });
 
-            $('.tab-contents article:lt(3)').show();
-              var items =  3;
-              var shown =  1;
-              $('.btn-more').click(function () {
-                  shown = $('.tab-contents article:visible').length+1;
-                  if(shown< items) {
-                    $('.tab-contents article:lt('+shown+')').show(300);
-                  } else {
-                    $('.tab-contents article:lt('+items+')').show(300);
-                  }
-               });
+            // $('.web ul li:lt(3)').show();
+            //   e.preventDefault();
+            //   var items =  3;
+            //   var shown =  1;
+            //   $('.btn-more').click(function () {
+            //       shown = $('.web ul li:visible').length+1;
+            //       if(shown< items) {
+            //         $('.web ul li:lt('+shown+')').show(300);
+            //       } else {
+            //         $('.web ul li:lt('+items+')').show(300);
+            //       }
+            //    });
+
+
+
+
+
+
+
 
 
 

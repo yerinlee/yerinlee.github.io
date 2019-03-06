@@ -1006,7 +1006,7 @@ section.current-page.sign-in-page .gallery li.show-remaning-el a:hover span.coun
 .cospo-page.home-page{margin-top: 0 !important;}
 
 body.light .cospo-page.ajax-page-mobile{background-color: #fff;}
-.ajax-gallery-title figcaption, .page-figure figcaption {opacity: 1;}
+.ajax-gallery-title div, .page-figure div {opacity: 1;}
 section.cospo-page:first-child{margin-top: 0;}
 
 
@@ -1058,35 +1058,35 @@ section.cospo-page:first-child{margin-top: 0;}
   background: rgba(0, 0, 0, 0.6) !important;
 }
 
-.ajax-gallery-title figcaption {
+.ajax-gallery-title div {
   padding-bottom: 44px;
   margin-bottom: .68em;
 }
 
-.ajax-gallery-title figcaption h2,
-.ajax-gallery-title figcaption h3,
-.ajax-gallery-title figcaption .cospo-comment .author-name,
-.cospo-comment .ajax-gallery-title figcaption .author-name,
-.ajax-gallery-title figcaption h4,
-.ajax-gallery-title figcaption h5,
-.ajax-gallery-title figcaption h6 {
+.ajax-gallery-title div h2,
+.ajax-gallery-title div h3,
+.ajax-gallery-title div .cospo-comment .author-name,
+.cospo-comment .ajax-gallery-title div .author-name,
+.ajax-gallery-title div h4,
+.ajax-gallery-title div h5,
+.ajax-gallery-title div h6 {
   margin: 0 0 50px;
   color: white !important;
 }
 
-.ajax-gallery-title figcaption p, .ajax-gallery-title figcaption h1 span, h1 .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption h2 span,
-h2 .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption h3 span,
-h3 .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption .cospo-comment .author-name span,
-.cospo-comment .author-name .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption h4 span,
-h4 .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption h5 span,
-h5 .ajax-gallery-title figcaption span,
-.ajax-gallery-title figcaption h6 span,
-h6 .ajax-gallery-title figcaption span {position: absolute; bottom: 0;}
+.ajax-gallery-title div p, .ajax-gallery-title div h1 span, h1 .ajax-gallery-title div span,
+.ajax-gallery-title div h2 span,
+h2 .ajax-gallery-title div span,
+.ajax-gallery-title div h3 span,
+h3 .ajax-gallery-title div span,
+.ajax-gallery-title div .cospo-comment .author-name span,
+.cospo-comment .author-name .ajax-gallery-title div span,
+.ajax-gallery-title div h4 span,
+h4 .ajax-gallery-title div span,
+.ajax-gallery-title div h5 span,
+h5 .ajax-gallery-title div span,
+.ajax-gallery-title div h6 span,
+h6 .ajax-gallery-title div span {position: absolute; bottom: 0;}
 
 body.light .ajax-page-dynamic .ajax-content {
   background-color: rgba(255, 255, 255, 0.9);
@@ -1166,7 +1166,7 @@ h5 .page-figure span,
 .page-figure h6 span,
 h6 .page-figure span {color: rgba(255, 255, 255, 0.9) !important;}
 
-.page-figure figcaption {
+.page-figure div {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1174,7 +1174,7 @@ h6 .page-figure span {color: rgba(255, 255, 255, 0.9) !important;}
   border: none;
 }
 
-.page-figure figcaption.all-place {
+.page-figure div.all-place {
   padding: 0 0 0 54px;
   width: 100%;
   height: 100%;
@@ -1197,7 +1197,7 @@ div.page-figure.in-content {padding: 0 15px;}
   }
 }
 @media (min-width: 767px) {
-  .page-figure figcaption {padding-left: 60px;}
+  .page-figure div {padding-left: 60px;}
 }
 @media screen and (max-width: 991px) {
   main {
@@ -1232,7 +1232,7 @@ div.page-figure.in-content {padding: 0 15px;}
 @media screen and (max-width: 767px) {
   .cospo-page{min-width: 100%;}
   .ajax-content {margin: 0 -15px; padding: 0;}
-  .page-figure figcaption {padding: 0 15px;}
+  .page-figure div {padding: 0 15px;}
   .page-title {padding: 1px 25px; }
   .cospo-page .content {padding: 0 30px;}
   .aside-menu{position: relative; top: 0; left:0;
@@ -1261,7 +1261,7 @@ div.page-figure.in-content {padding: 0 15px;}
 }
 @media screen and (min-width: 992px) {
   .scroll > .page-figure:not(.in-content) {margin-top: -54px !important;}
-  .scroll > .page-figure:not(.in-content) figcaption {padding-bottom: 0;}
+  .scroll > .page-figure:not(.in-content) div {padding-bottom: 0;}
   .wrapper-scroll { position: relative; overflow: hidden; height: 100%; width: 100%;}
   .scroll {
     position: relative;
@@ -1399,6 +1399,9 @@ div.page-figure.in-content {padding: 0 15px;}
   .brand-table .cell:nth-child(3) {border-right: 0;}
   .brand-table .cell {height: 50px; line-height: 50px; text-align: left;}
   .brand-table .cell span{font-size: 16px;}
+  .brand-table .cell:nth-last-child(1),
+  .brand-table .cell:nth-last-child(2),
+  .brand-table .cell:nth-last-child(3) {border-bottom: 0;}
 
 }
 @media screen and (min-width: 768px) {
@@ -1420,7 +1423,7 @@ div.page-figure.in-content {padding: 0 15px;}
   .tab-contents{position: relative;}
   .tab-contents > div{display: none; }
   .tab-contents > div.active{display: block;}
-  .tab-contents article{border-bottom: 0.5px solid #ccc;}
+
   .btn-link{padding: 50px 0; text-align: center;}
   .btn-link a{
     border: 2px solid #fff;
@@ -1428,8 +1431,7 @@ div.page-figure.in-content {padding: 0 15px;}
     padding: 10px 20px;
     border-radius:54px;
     font-weight: 600;
-    margin-right: 20px;
-    margin:15px 0;
+    margin-right: 10px;
   }
   .btn-link a:hover{color: #222; background: #fff; border: 2px solid #fff;}
   .portfolio-page .title{display: none;}
@@ -1475,12 +1477,13 @@ div.page-figure.in-content {padding: 0 15px;}
     .portfolio-page .title h2{ margin-left: 20px;}
     .portfolio-page .page-title{display: none !important; }
     .btn-link{padding: 0;}
-    .btn-link a{display: block; margin-right: 0;}
+    .btn-link a{display: block; margin-right: 0; margin: 15px 0; font-size: 16px; font-weight:600;}
     .tab-contents article{border-bottom: 0px;}
-    .tab-contents article:nth-child(2){display: none;}
     .tab-contents p{font-size: 14px;}
     .tab-contents h4, .tab-contents span{font-size: 16px; font-weight: 600;}
     .work-gallery ul{padding: 50px 20px 0 10px;}
+    .work-gallery .img-wrap p{margin-top: 30px !important;}
+    .brand-table .cell{border-right: none;}
   }
   @media (min-width: 992px) and (max-width: 1050px) {
     .aside-menu.icons li a {width: 70px;  height: 70px;  line-height: 70px;}
@@ -1501,10 +1504,7 @@ div.page-figure.in-content {padding: 0 15px;}
   }
 
 
-  .aside-menu.icons-brand li {
-    margin-bottom: 50px;
-  }
-
+  .aside-menu.icons-brand li {margin-bottom: 50px;}
   .aside-menu.icons-brand li a {
     display: block;
     opacity: .4;
@@ -1541,9 +1541,7 @@ div.page-figure.in-content {padding: 0 15px;}
     transition: transform 0.2s ease;
     -webkit-transition: -webkit-transform .2s ease;
     -webkit-transform: scale(0.785) translate3d(0, 0, 0);
-    -ms-transform: scale(0.785) translate3d(0, 0, 0);
     transform: scale(0.785) translate3d(0, 0, 0);
-    -ms-transform-origin: 0 50%;
     -webkit--transform-origin: 0 50%;
     transform-origin: 0 50%;
     text-align: left;
@@ -1554,7 +1552,6 @@ div.page-figure.in-content {padding: 0 15px;}
 
   .aside-menu.text li a.active, .aside-menu.text li a:hover {
     -webkit-transform: scale(1) translate3d(0, 0, 0);
-    -ms-transform: scale(1) translate3d(0, 0, 0);
     transform: scale(1) translate3d(0, 0, 0);
     color: #fff;
     background-color: transparent;
@@ -1608,29 +1605,77 @@ div.page-figure.in-content {padding: 0 15px;}
     color: rgba(55, 55, 55, 0.9) !important;
   }
 
+
   /* work-gallery */
 
   .work-gallery{position: relative; }
-  .work-gallery ul li a::after{
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.6); transition: 0.5s;
-    opacity: 0;
-  }
   .work-gallery img{transition: 0.5s;}
-  .work-gallery a:hover img{transform: scale(1.2);}
   .work-gallery ul li{padding-bottom: 15px; padding-right: 5px;}
   .work-gallery ul li:nth-child(7), .work-gallery ul li:nth-child(8),
   .work-gallery ul li:nth-child(9), .work-gallery ul li:nth-child(10),
-  .work-gallery ul li:nth-child(11), .work-gallery ul li:nth-child(12),
-  .work-gallery ul li:nth-child(13), .work-gallery ul li:nth-child(14),
-  .work-gallery ul li:nth-child(15), .work-gallery ul li:nth-child(16),
-  .work-gallery ul li:nth-child(17), .work-gallery ul li:nth-child(18){display: none;}
-  .work-gallery ul li a{display: block; position: relative; border-radius: 5px; overflow: hidden;}
-  .work-gallery ul li a:hover::after{opacity: 1;}
-  .btn-more{left: 50%; transform: translateX(-50%);}
+  .work-gallery ul li:nth-child(11), .work-gallery ul li:nth-child(12){display: none;}
+  .btn-more{left: 50%; transform: translateX(-50%); margin-bottom: 50px;}
+
+  .img-wrap {
+    position: relative;
+    color: #ffffff;
+    text-align: left;
+    background-color: #000000;
+    font-size: 16px;
+  }
+  .img-wrap * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  .img-wrap img {position: relative; vertical-align: top;}
+  .img-wrap div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    padding: 20px 30px;
+    width: 100%;
+  }
+  .img-wrap div:before, .img-wrap div:after {width: 1px; height: 0;}
+  .img-wrap div:before {right: 0; top: 0;}
+  .img-wrap div:after {left: 0; bottom: 0;}
+  .img-wrap h3, .img-wrap p {line-height: 1.5em;}
+  .img-wrap h3 {margin: 0 0 5px; font-weight: 600; font-size: 1.7em;}
+  .img-wrap p {font-size: 1em; font-weight: 500; margin: 0 0 15px; margin-top: 50px;}
+
+  .img-wrap::before,
+  .img-wrap::after,
+  .img-wrap div:before,
+  .img-wrap div:after {
+    position: absolute;
+    content: '';
+    background-color: #ffffff;
+    z-index: 1;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 0.8;
+  }
+  .img-wrap::before, .img-wrap::after {height: 1px; width: 0%;}
+  .img-wrap::before {top: 0; left: 0;}
+  .img-wrap::after {bottom: 0; right: 0;}
+  .img-wrap:hover img, .img-wrap.hover img {opacity: 0.4;}
+  .img-wrap:hover div, .img-wrap .hover div { opacity: 1;}
+  .img-wrap:hover div:before,
+  .img-wrap.hover div:before,
+  .img-wrap:hover div:after,
+  .img-wrap.hover div:after {height: 100%;}
+
+  .img-wrap:hover:before, .img-wrap.hover:before,
+  .img-wrap:hover:after, .img-wrap.hover:after {width: 100%;}
+
+  .img-wrap:hover:before, .img-wrap.hover:before,
+  .img-wrap:hover:after, .img-wrap.hover:after,
+  .img-wrap:hover div:before, .img-wrap:hover div:after,
+  .img-wrap.hover div:after {opacity: 0.1;}
+
 
 
   /* Contacts ==================================================================*/
@@ -1947,11 +1992,11 @@ ul.gallery-services.aside-menu li a.loading:before {content: '';}
   }
 
   .ajax-gallery-title--opened {opacity: 1;}
-  .ajax-gallery-title figcaption {padding-bottom: 0;}
+  .ajax-gallery-title div {padding-bottom: 0;}
 }
 @media (min-width: 768px) {
 
-  .cospo-page > .page-figure figcaption{padding-left: 60px;}
+  .cospo-page > .page-figure div{padding-left: 60px;}
 }
 
 
@@ -2017,7 +2062,7 @@ ul.gallery-services.aside-menu li a.loading:before {content: '';}
     background-size: cover;
   }
 
-  .ajax-gallery-title figcaption h2 {margin-bottom: 50px;}
+  .ajax-gallery-title div h2 {margin-bottom: 50px;}
   .ajax-page .content {padding-right: 0;}
   .ajax-menu {padding-left: 0;}
   .ajax-menu .wrapper-scroll {margin-left: 0 !important;}
