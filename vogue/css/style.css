@@ -623,6 +623,28 @@
 
 
 
+  .bg{
+    position: fixed;
+    width: 100%; height: 100%;
+    z-index: 100;
+    background: #fff;
+
+    animation: bg 10s infinite;
+  }
+  @keyframes bg {
+    0%{filter:hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);}
+  }
+  .loading{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    height: 150px;
+  }
+  .loading h1{color:#222; letter-spacing: 10px;}
+
+
+
   /* 미디어 쿼리======================================================= */
 
   /* 모바일 */

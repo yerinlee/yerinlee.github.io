@@ -299,7 +299,9 @@ $(function(){
     }
   });
   $(window).resize();
-
+  $('img').on('load',function(){
+    $('.bg').fadeOut(500);
+  })
 
 
 

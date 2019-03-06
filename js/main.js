@@ -76,26 +76,5 @@ $(function() {
                }
             });
 
-            // $('.web ul li:lt(3)').show();
-            //   e.preventDefault();
-            //   var items =  3;
-            //   var shown =  1;
-            //   $('.btn-more').click(function () {
-            //       shown = $('.web ul li:visible').length+1;
-            //       if(shown< items) {
-            //         $('.web ul li:lt('+shown+')').show(300);
-            //       } else {
-            //         $('.web ul li:lt('+items+')').show(300);
-            //       }
-            //    });
-
-
-
-
-
-
-
-
-
 
 });

@@ -26,12 +26,8 @@ var config = {
 	retina2ImageSuffix: '@2x',
 	retina3ImageSuffix: '@3x',
 
-	// Ensure Content-Type is an image before trying to load @2x image
-	// https://github.com/imulus/retinajs/pull/45)
-	check_mime_type: true,
 
-	// Resize high-resolution images to original image's pixel dimensions
-	// https://github.com/imulus/retinajs/issues/8
+	check_mime_type: true,
 	force_original_dimensions: true
 };
 
@@ -174,9 +170,6 @@ RetinaImagePath.prototype.check_2x_variant = function (callback) {
 			http = new XMLHttpRequest();
 			http.open('HEAD', that.at_2x_path);
 			http.onreadystatechange = function () {
-				// if(http.readyState !== 4){
-				//     return callback(false);
-				// }
 				if (http.status === 0 || http.status >= 200 && http.status <= 399) {
 					if (config.check_mime_type) {
 						var type = http.getResponseHeader('Content-Type');
@@ -243,12 +236,8 @@ RetinaImage.prototype.swap = function (path) {
 	}
 	load();
 };
-
 var isRetina = Retina.isRetina();
-// if (isRetina) {
-//     Retina.init(root, isRetina);
-// }
-// })();
+
 
 /* IE9 placeholder
 ----------------------------------------------------------------------*/
@@ -258,24 +247,19 @@ var isRetina = Retina.isRetina();
 		var cls = "placeholder"; // set name of the class
 
 		if (input) {
-			// if fields found
 			for (var i = 0; i < input.length; i++) {
 				var t = input[i];
 				var txt = t.getAttribute("placeholder");
 
 				if (txt.length > 0) {
-					// if placeholder found
 					t.className = t.value.length == 0 ? t.className + " " + cls : t.className; // add class
 					t.value = t.value.length > 0 ? t.value : txt; // if no value found
-
 					t.onfocus = function () {
-						// on focus
 						this.className = this.className.replace(cls);
 						this.value = this.value == this.getAttribute("placeholder") ? "" : this.value;
 					};
 
 					t.onblur = function () {
-						// on focus out
 						if (this.value.length == 0) {
 							this.value = this.getAttribute("placeholder");
 							this.className = this.className + " " + cls; // add class
@@ -290,7 +274,7 @@ var isRetina = Retina.isRetina();
 // polyfills
 /* ClassList
 ----------------------------------------------------------------------*/
-/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
+
 if ("document" in self) {
 	if (!("classList" in document.createElement("_"))) {
 		(function (j) {
@@ -414,12 +398,6 @@ if ("document" in self) {
 
 /* requestAnimationFrame
 ----------------------------------------------------------------------*/
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
-
-// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-
-// MIT license
 
 (function () {
 	var lastTime = 0;
@@ -446,10 +424,7 @@ if ("document" in self) {
 
 /* Help function
 ----------------------------------------------------------------------*/
-/**
- * check if has 3d animation
- * return true if has
- */
+
 var check3d = function check3d() {
 
 	"use strict";
@@ -471,7 +446,6 @@ var check3d = function check3d() {
 		'objectFit': 'object-fit'
 	};
 
-	// Add it to the body to get the computed style
 	document.body.insertBefore(el, null);
 
 	for (var t in transforms) {
@@ -516,7 +490,7 @@ function whichTransitionEvent() {
 	}
 }
 
-/* Listen for a transition! */
+
 var transitionEvent = whichTransitionEvent();
 /**
  * Detecting CSS animation support
@@ -573,7 +547,6 @@ function ajaxPageLoader(action, block) {}
 var centerImage = function centerImage(options) {
 
 	"use strict";
-
 	scroll.init();
 
 	if (!options) {
@@ -592,9 +565,7 @@ var centerImage = function centerImage(options) {
 
 	var imgs = options.block.querySelectorAll(options.nameClass);
 
-	if (imgs.length <= 0) {
-		return false;
-	}
+	if (imgs.length <= 0) {return false;}
 
 	var setSize = function setSize(img, width, height, parentWidth) {
 		var proportion = width / height,
@@ -777,36 +748,13 @@ var GoogleMap = (function () {
 			var position = target.getBoundingClientRect();
 			this.top = position.top;
 			this.left = position.left;
-			//
-			// this.width = target.clientWidth;
-			// this.height = target.clientHeight;
-			//
-			// this.googleMap.style.width = this.width + 'px';
-			// this.googleMap.style.height = this.height + 'px';
-			//
-			// this.googleMap.style.top = this.top + 'px';
-			// this.googleMap.style.left = this.left + 'px';
 
 			this.googleMap.style.transformOrigin = this.left + 'px ' + this.top + 'px';
 			this.googleMap.style.WebkitTransformOrigin = this.left + 'px ' + this.top + 'px';
 			this.googleMap.style.MsTransformOrigin = this.left + 'px ' + this.top + 'px';
 
-			//
-			// this.canvasMap.style.top = -this.top + 'px';
-			// this.canvasMap.style.left = -this.left + 'px';
-
 			setTimeout(function () {
 				_this.googleMap.classList.add('open');
-				//
-				// this.googleMap.style.width = '100%';
-				// this.googleMap.style.height = '100%';
-				// this.googleMap.style.height = '100vh';
-				//
-				// this.googleMap.style.top = '0';
-				// this.googleMap.style.left = '0';
-				//
-				// this.canvasMap.style.top = '0';
-				// this.canvasMap.style.left = '0';
 			}, 100);
 
 			this.setAction(target);
@@ -850,21 +798,6 @@ var GoogleMap = (function () {
 				}
 			}
 
-			// this.googleMap.style.width = this.width + 'px';
-			// this.googleMap.style.height = this.height + 'px';
-			//
-			// this.googleMap.style.top = this.top + 'px';
-			// this.googleMap.style.left = this.left + 'px';
-			//
-			// // this.googleMap.style.listStyle = "width:" + this.width + "px; height:"+ this.height + "px; top:" + this.top + "px; left:" + this.left + "px;";
-			//
-			// this.canvasMap.style.top = -this.top + 'px';
-			// this.canvasMap.style.left = -this.left + 'px';
-
-			// this.canvasMap.style.listStyle = "top:" + -this.top + "px; left:" +
-			// -this.left + "px;";
-
-			// this.googleMap.style.opacity = 0;
 			this.googleMap.classList.remove('open');
 
 			setTimeout(function () {
@@ -1075,14 +1008,6 @@ var PageTranslate = (function () {
 
 	/* Scroll
  ----------------------------------------------------------------------*/
-	// import { throttle } from 'lodash';
-	//
-	// console.log(throttle);
-
-	/**
-  * Custom scroll
-  * Author: Mestafor
-  */
 
 	_createClass(PageTranslate, [{
 		key: 'init',
@@ -1220,10 +1145,6 @@ var PageTranslate = (function () {
 					}));
 					// }, t * 800 );
 				});
-
-				// item.addEventListener( transitionEvent, () => {
-				// 	this.onTransitionEnd();
-				// } );
 			});
 
 			this.pages.addEventListener(transitionEvent, function () {
@@ -1242,7 +1163,7 @@ var PageTranslate = (function () {
 
 			// координати сторінок по Х
 			var positionPage = this.positionPage = [],
-			   
+
 			// вибирає усі сторінки у блоці
 			pages;
 
@@ -1304,10 +1225,6 @@ var PageTranslate = (function () {
 
 			this.idArray = [];
 
-			// this.bgPositions = [];
-
-			// записує координати по Х
-			// add background's coordinate to array
 			arrProto.forEach.call(pages, function (page, index) {
 				var id = page.getAttribute('id');
 
@@ -1322,19 +1239,7 @@ var PageTranslate = (function () {
 				if (wW >= 768) {
 
 					page.style.width = pageWidth + 'px';
-					// if ( wW >= 992 && this.backgrounds[ index ] ) {
-					// 	this.backgrounds[ index ].style.width = pageWidth + 'px';
-					// 	this.backgrounds[ index ].style.left = pageWidth * index + 'px';
-					// 	fullBgWidth = fullBgWidth + pageWidth;
-					// }
 				}
-
-				// if ( page.classList.contains( 'current-page' ) )
-				// {
-				// 	this.hasCurrent = true;
-				// 	// this.goTo( index, 0 );
-				// 	this.currentPage = index;
-				// }
 			});
 
 			arrProto.forEach.call(this.backgrounds, function (background, index) {
@@ -1357,18 +1262,9 @@ var PageTranslate = (function () {
 				parentBg.style.width = '';
 			}
 
-			// if ( this.currentPage )
-			// {
-			// 	this.goTo( this.currentPage, 0 );
-			// }
-			//
-			// if ( !this.hasCurrent )
-			// {
 			this.goToHash();
-			// }
 
 			this.hasCurrent = false;
-
 			galleryImg(this.backgroundDiv);
 		}
 
@@ -1440,7 +1336,6 @@ var PageTranslate = (function () {
 		key: 'prevPage',
 		value: function prevPage() {
 
-			// якщо сторінок 1 або менше ( менше не може бути )
 			if (this.contentPage <= 1) {
 				return true;
 			}
@@ -1586,9 +1481,6 @@ var PageTranslate = (function () {
 
 			// previous page
 			this.previousPage = this.currentPage;
-			// next page after current page
-			// this.followPage = page + 1;
-			// check for length of pages
 			if (this.followPage >= this.contentPageLength) {
 				this.followPage = 0;
 			}
@@ -1597,7 +1489,6 @@ var PageTranslate = (function () {
 			if (window.innerWidth >= 992) {
 				page = page >= this.contentPageLength ? page - 1 : page;
 				this.changePageCss(page, speed);
-				// this.changePageParalax( page, speed );
 			}
 
 			if (window.innerWidth < 992) {
@@ -1774,11 +1665,6 @@ var PageTranslate = (function () {
 			}
 		}
 
-		/*
-   * Animate backgrounds
-   * need effect of paralax
-   * delete if not use !!!!! ( it's for me )
-   */
 	}, {
 		key: 'changePageParalax',
 		value: function changePageParalax(endPosition) {
@@ -1858,16 +1744,6 @@ var PageTranslate = (function () {
 							} else {
 								_this9.backgrounds[_this9.currentPage].classList.add('active');
 							}
-
-							// var menu = document.querySelector( '.navigation-menu' );
-							// if ( menu ) {
-							// 	let li = menu.querySelector('a[href="#'+this.contentPage[ this.currentPage ].id+'"]'),
-							// 			preLi = menu.querySelector('a[href="#'+this.contentPage[ this.previousPage ].id+'"]');
-							// 	if(li) {
-							// 		preLi.parentNode.classList.remove( 'active' );
-							// 		li.parentNode.classList.add( 'active' );
-							// 	}
-							// }
 
 							setTimeout(function () {
 								_this9.onLinkScroll = false;
@@ -2022,32 +1898,8 @@ var PageTranslate = (function () {
 					}
 
 					var menu = document.querySelector('.navigation-menu');
-					// if ( menu ) {
-					// 	let li = menu.querySelector('a[href="#'+this.contentPage[ active ].id+'"]'),
-					// 			preLi = menu.querySelector('a[href="#'+this.contentPage[ this.previousPage ].id+'"]');
-					// 	if(li) {
-					// 		preLi.parentNode.classList.remove( 'active' );
-					// 		li.parentNode.classList.add( 'active' );
-					// 	}
-					// }
-
-					// for ( i = 0; i < length; i++ ) {
-					// 	if ( !this.backgrounds[ i ] ) {
-					// 		continue;
-					// 	}
-					// this.backgrounds[ i ].classList.remove( 'active' );
-
-					// let li = menu.querySelector('a[href="#'+this.contentPage[ i ].id+'"]');
-					// li.parentNode.classList.remove( 'active' );
-					// }
-
-					// let preLi = menu.querySelector('a[href="#'+this.contentPage[ this.previousPage ].id+'"]');
-					// preLi.parentNode.classList.remove( 'active' );
-
 					_this10.backgrounds[active + 1].classList.add('active');
-					// let li = menu.querySelector('a[href="#'+this.contentPage[ active ].id+'"]');
-					// li.parentNode.classList.add( 'active' );
-					//
+
 					_this10.currentPage = active;
 
 					if (window.history) {
@@ -2057,8 +1909,6 @@ var PageTranslate = (function () {
 					} else {
 						location.hash = _this10.contentPage[active].getAttribute('id');
 					}
-
-					// gallery.onFirstLoad();
 				}
 			};
 
@@ -2131,10 +1981,6 @@ var Scroll = (function () {
 
 	/* Gallery
  ----------------------------------------------------------------------*/
-	/**
-  * Cospo Gallery
-  * Author: Mestafor
-  */
 
 	/**
   * init scroll
@@ -2460,12 +2306,10 @@ var LeftMenu = (function () {
 
 			var current = this.currentPosition;
 			current++;
-			// якщо більша за кількість елементів прирівнюється до 0
 			if (current >= this.elementsPositionLength) {
 				current = 0;
 			}
 
-			// пререходить на задану позицію
 			this.goTo(current);
 		}
 	}, {
@@ -2474,12 +2318,11 @@ var LeftMenu = (function () {
 
 			var current = this.currentPosition;
 			current--;
-			// якщо більша за кількість елементів прирівнюється до 0
+
 			if (current < 0) {
 				current = this.elementsPositionLength - 1;
 			}
 
-			// пререходить на задану позицію
 			this.goTo(current);
 		}
 	}, {
@@ -2688,17 +2531,6 @@ var Gallery = (function () {
 		});
 
 		this.init();
-
-		// window.addEventListener( 'resize', () =>
-		// {
-		// this.closeBtn = document.querySelector( '.navigation-btn' );
-		// if ( this.closeBtn ) {
-		// 	if ( this.closeBtn.getAttribute( 'data-action' ) === 'close-ajax-page' ) {
-		// 		return;
-		// 	}
-		// }
-		// this.deleteCloseBtn();
-		// } );
 	}
 
 	/* Accordeon
@@ -2812,7 +2644,6 @@ var Gallery = (function () {
 			}
 
 			for (; i--;) {
-				// i > showItems ? items[i].style.display = 'none'; : break;
 				if (i >= showItems) {
 					items[i].style.display = 'none';
 				}
@@ -2983,12 +2814,9 @@ var Gallery = (function () {
 
 			this.mainBlock.setAttribute('id', 'ajax-page' + pageId);
 
-			/* if container has class blog create blog */
-			/* new check */
+
 			if (pages.contentPage[pages.currentPage].classList.contains('blog')) {
 				this.createBlogPage();
-				// this.sendRequest( action, galleryId );
-				// return true;
 			} else {
 
 					this.createMenu();
@@ -3003,9 +2831,7 @@ var Gallery = (function () {
 					} else {
 						main.appendChild(this.mainBlock);
 					}
-					// } else {
-					// 	document.body.appendChild( this.mainBlock );
-					// }
+
 				}
 
 			setTimeout(function () {
@@ -3022,10 +2848,9 @@ var Gallery = (function () {
 				var btn = document.querySelector('.navigation-btn');
 				if (btn) {
 					btn.classList.remove('hideMenu');
-					// btn.setAttribute( 'data-action', 'close-ajax-page' );
 				}
 
-				// document.querySelector( 'main' ).classList.add( 'noScroll' );
+
 				document.querySelector('main').classList.add('ajax-page-dymamic--opened');
 
 				_this21.firstLoadContent = true;
@@ -3040,10 +2865,7 @@ var Gallery = (function () {
 		value: function createCloseBtn() {
 			// if ( !this.closeBtn ) {
 			var closeBtn = this.closeBtn = document.querySelector('.navigation-btn');
-			// 	if ( !this.closeBtn ) {
-			// 		return;
-			// 	}
-			// }
+
 			closeBtn.setAttribute('data-action', 'close-ajax-page');
 			closeBtn['data-action'] = 'close-ajax-page';
 		}
@@ -3435,27 +3257,6 @@ var Gallery = (function () {
 					this.contentPageBlock = tmpContentPage.querySelector('.ajax-content');
 				}
 			}
-
-			// if ( this.contentPageBlock ) {
-			// 	if( this.contentPageBlock.parentNode ) {
-			// 		// this.contentPage.classList.add('loading');
-
-			// 		// if ( this.firstLoadContent ) {
-			// 			var menu = this.contentPageBlock.parentNode.querySelector( '.ajax-menu' );
-			// 			if( menu ) {
-
-			// 					this.setActiveElement( action, menu );
-
-			// 					var loading = menu.querySelector( 'a.loading' );
-			// 					if ( loading ) {
-			// 						loading.classList.remove( 'loading' );
-			// 					}
-			// 			}
-			// 			this.firstLoadContent = false;
-			// 		// }
-			// 	}
-			// }
-
 			if (this.contentPageBlock) {
 				var _parent = this.contentPageBlock.parentNode;
 				if (_parent) {
@@ -3492,13 +3293,6 @@ var Gallery = (function () {
 				}
 
 				if (xhr.readyState === 4 && xhr.status === 200) {
-
-					// add let ajaxTitle
-					// check if exist
-					// add class to hide
-					// replace child
-					// remove class to show
-					// wts 0_o
 
 					if (windowWidth < 992) {
 						var parent;
@@ -3556,12 +3350,6 @@ var Gallery = (function () {
 								// parent.classList.remove('loading');
 							}
 						}
-
-						// if( window.innerWidth < 992 ) {
-						// if( this.mainBlock ) {
-						// 	this.mainBlock.classList.add('ajax-page-mobile--loaded');
-						// }
-						// }
 
 						if (galleryId) {
 							pages.contentPage[pages.currentPage].classList.remove('current-page');
@@ -3699,10 +3487,6 @@ var Gallery = (function () {
 						$('.social-likes').on('popup_closed.social-likes', function (event, service) {
 							// Request new counters
 							$(event.currentTarget).socialLikes({ forceUpdate: true });
-
-							// Or just increase the number
-							// var counter = $(event.currentTarget).find('.social-likes__counter_' + service);
-							// counter.text(+(counter.text()||0)+1).removeClass('social-likes__counter_empty');
 						});
 
 						_this24.requestIsSending = false;
@@ -3923,13 +3707,6 @@ var Gallery = (function () {
 
 			galleryId = galleryId.toString();
 			galleryId = galleryId.replace(/\//gi, '');
-
-			// if( galleryId.indexOf('blog-post') !== -1 ) {
-			// 	this.createBlogPage();
-			// 	this.sendRequest( action, galleryId );
-			// 	return true;
-			// }
-
 			this.gallery = document.getElementById(galleryId);
 
 			this.loadPage();
@@ -4210,23 +3987,13 @@ var NavigationCarousel = (function () {
 		key: 'carouselMenu',
 		value: function carouselMenu() {
 			var _this27 = this;
-
-			// if( window.innerWidth < 992 ) {
-			//   return false;
-			// }
-
 			this.navMenu = document.querySelector('.navigation-menu');
 			if (!this.navMenu) {
 				return false;
 			}
 
-			// let lis = this.navMenu.querySelectorAll( 'li' );
-			// select all children
 			var lis = this.navMenu.children;
-
 			this.carouselInit = false;
-
-			// set count of visible item
 			var countVisibleItem = this.countVisibleItem = 5;
 
 			if (lis.length < countVisibleItem) {
@@ -4249,23 +4016,12 @@ var NavigationCarousel = (function () {
 			}
 
 			this.carouselInit = true;
-
 			this.navMenu.classList.add('carousel-menu');
-
-			// height li
 			this.liHeight = lis[0].clientHeight;
-
-			// full height
 			this.fullHieght = this.liHeight * lis.length;
-			// static height
 			this.menuHeight = this.liHeight * lis.length * 3;
-
 			this.liLength = lis.length;
-
 			this.liPosition = [];
-
-			// this.fragment = document.createDocumentFragment();;
-
 			this.navMenu.style.height = this.menuHeight + 'px';
 
 			var lisLength = lis.length;
@@ -4273,19 +4029,13 @@ var NavigationCarousel = (function () {
 			var docFrag1 = document.createDocumentFragment();
 			var docFrag2 = document.createDocumentFragment();
 
-			// clone li and add them before other li
 			for (var _i6 = 0; _i6 < lisLength; _i6++) {
 				lis[_i6].style.height = this.liHeight + 'px';
 				var cloneNode = lis[_i6].cloneNode(true);
 				var cloneNode2 = lis[_i6].cloneNode(true);
-				// // let cloneNode3 = lis[i].cloneNode(true);
+
 				cloneNode.classList.add('clones-attack');
 				cloneNode2.classList.add('clones-attack');
-				// // cloneNode3.classList.add('fragment');
-				// // this.fragment.appendChild(cloneNode3);
-				// this.navMenu.insertBefore( cloneNode, lis[ 0 ] );
-				// this.navMenu.appendChild( cloneNode2 );
-
 				docFrag1.appendChild(cloneNode);
 				docFrag2.appendChild(cloneNode2);
 			}
@@ -4401,7 +4151,6 @@ var NavigationCarousel = (function () {
 			var isKey = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
 			if (!this.carouselInit) {
-				// pages.closeAjaxPage();
 				pages.nextPage();
 				return false;
 			}
@@ -4456,7 +4205,6 @@ var NavigationCarousel = (function () {
 
 			if (id === hash) {
 				if (window.pages) {
-					// pages.closeAjaxPage();
 					pages.nextPage();
 				}
 			}
@@ -4469,7 +4217,6 @@ var NavigationCarousel = (function () {
 			var isKey = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
 
 			if (!this.carouselInit) {
-				// pages.closeAjaxPage();
 				pages.nextPage();
 				return false;
 			}
@@ -4520,7 +4267,6 @@ var NavigationCarousel = (function () {
 
 			if (id === hash) {
 				if (window.pages) {
-					// pages.closeAjaxPage();
 					pages.prevPage();
 				}
 			}
@@ -4582,7 +4328,6 @@ var NavigationCarousel = (function () {
 				this.navMenu.style.transition = '-webkit-transform ' + 0 + 'ms ';
 				transition(this.navMenu, 'transform ' + 0 + 'ms ');
 
-				// change translateX
 				transform(this.navMenu, has3d ? 'translate3d(0, ' + -this.liPosition[this.currentPosition] + 'px, 0)' : 'translateY(' + -this.liPosition[this.currentPosition] + 'px)');
 			} else if (this.currentPosition >= (this.liLength - 1) * 2) {
 
@@ -4592,8 +4337,6 @@ var NavigationCarousel = (function () {
 
 				this.navMenu.style.WebkitTransition = '-webkit-transform ' + 0 + 'ms ';
 				transition(this.navMenu, 'transform ' + 0 + 'ms ');
-
-				// change translateX
 				transform(this.navMenu, has3d ? 'translate3d(0, ' + -this.liPosition[this.currentPosition] + 'px, 0)' : 'translateY(' + -this.liPosition[this.currentPosition] + 'px)');
 			}
 
@@ -4669,17 +4412,13 @@ var NavigationCarousel = (function () {
 			}
 
 			this.isOpenFullMenu = true;
-
 			this.navMenu.parentNode.classList.add('mouse-over');
-
 			if (this.liLength === this.countVisibleItem) {
 				return false;
 			}
 
 			this.isOpenedMenu = true;
-
 			this.oldCurrentPosition = this.currentPosition;
-
 			var tempPosition = this.currentPosition;
 
 			var n = Math.abs(this.countVisibleItem - this.liLength);
@@ -4777,22 +4516,12 @@ var NavigationCarousel = (function () {
 		value: function setCurrentPosition(index, li, id) {
 			this.setPosition = true;
 			var firstPosition = index;
-
-			// if( firstPosition < Math.abs(this.liLength / 2) ) {
-			// 	firstPosition = this.currentPosition + firstPosition - 2;
-			// } else {
-			// 	firstPosition = this.currentPosition - firstPosition - 2;
-			// }
-
 			var i = undefined;
 			for (i = 0; i < this.allLiLength; i++) {
 				if (this.lis[i] === li) {
 					break;
 				}
 			}
-
-			// firstPosition = firstPosition + this.liLength - 2;
-			// firstPosition = Math.abs(this.currentPosition - firstPosition);
 			this.tempPosition = i - Math.floor(this.countVisibleItem / 2);
 		}
 
@@ -4952,10 +4681,6 @@ var NavigationCarousel = (function () {
 				isTouchStart = true;
 
 				event.target.addEventListener('touchmove', moveMenu);
-
-				// document.addEventListener( 'touchmove', ( event ) => {
-				//
-				// });
 			};
 
 			this.navMenu.addEventListener('touchstart', onMenu);
@@ -4965,8 +4690,6 @@ var NavigationCarousel = (function () {
 
 			var onWheel = function onWheel(e) {
 				e = e || window.event;
-
-				// wheelDelta не дает возможность узнать количество пикселей
 				var delta = e.deltaY || e.detail || e.wheelDelta;
 
 				if (delta > 0) {
@@ -4979,23 +4702,7 @@ var NavigationCarousel = (function () {
 			};
 
 			var elem = this.navMenu;
-			// if (elem.addEventListener) {
-			// 	let elem = this.navMenu;
-			//   if ('onwheel' in document) {
-			//     // IE9+, FF17+, Ch31+
-			//     elem.addEventListener("wheel", onWheel);
-			//   }
-			// 	else if ('onmousewheel' in document) {
-			//     // устаревший вариант события
-			//     elem.addEventListener("mousewheel", onWheel);
-			//   }
-			// 	else {
-			//     // Firefox < 17
-			//     elem.addEventListener("MozMousePixelScroll", onWheel);
-			//   }
-			// } else { // IE8-
-			//   elem.attachEvent("onmousewheel", onWheel);
-			// }
+
 		}
 
 		/*********************************************************/
@@ -5017,8 +4724,6 @@ var NavigationCarousel = (function () {
 				duration: speed,
 				timing: function timing(timeFraction) {
 					return timeFraction;
-					// timeFraction < 0.5 ? 4 * timeFraction * timeFraction * timeFraction :
-					// 	( timeFraction - 1 ) * ( 2 * timeFraction - 2 ) * ( 2 * timeFraction - 2 ) + 1;
 				},
 				draw: function draw(progress) {
 
@@ -5040,22 +4745,16 @@ var NavigationCarousel = (function () {
 		value: function animate(setting) {
 
 			var start = new Date().getTime();
-
-			// this.draw = window.requestAnimationFrame( animate );
-
 			animate();
 
 			function animate() {
 
-				// timeFraction от 0 до 1
 				var now = new Date().getTime();
-
 				var timeFraction = (now - start) / setting.duration;
-
 				if (timeFraction > 1) {
 					timeFraction = 1;
 				}
-				// текущее состояние анимации
+
 				var progress = setting.timing(timeFraction);
 				setting.draw(progress);
 
@@ -5250,30 +4949,6 @@ var Slider = (function () {
 			if (!this.items) {
 				return;
 			}
-
-			// [].forEach.call( this.items, item => {
-			// 	var img = item.querySelector( 'img' );
-			//
-			// 	if ( !img ) {
-			// 		return false;
-			// 	}
-			//
-			// 	var height = img.naturalHeight,
-			// 		width = img.naturalWidth,
-			// 		proportion = width / height,
-			// 		parentWidth = item.clientWidth;
-			//
-			// 	if ( width >= height ) {
-			// 		img.style.height = item.clientHeight + 'px';
-			// 		img.style.width = item.clientHeight * proportion + 'px';
-			// 		img.style.left = -( item.clientHeight * proportion - parentWidth ) / 2 + 'px';
-			// 	} else {
-			// 		img.style.width = item.clientWidth + 'px';
-			// 		img.style.height = item.clientWidth / proportion + 'px';
-			// 		img.style.top = -( item.clientWidth / proportion - item.clientHeight ) / 2 + 'px';
-			// 	}
-			//
-			// } );
 		}
 	}, {
 		key: 'resize',
@@ -5363,11 +5038,6 @@ var FullImage = (function () {
 
 			this.swipe();
 
-			// this.div = document.createElement('div');
-			// this.div.classList.add('show-full-image');
-
-			// width of fullImageBlock
-			// change on resize
 			this.mainWidth = parseInt(window.innerWidth * 0.8, 10);
 			this.mainHeight = parseInt(window.innerHeight * 0.8, 10);
 			var widthUl = 0;
@@ -5391,10 +5061,6 @@ var FullImage = (function () {
 				// change on resize
 				li.style.width = _this36.mainWidth + 'px';
 				li.style.height = _this36.mainHeight + 'px';
-
-				// this.centerImage ( cloneImage );
-				// this.containImage( cloneImage );
-
 				if (!_this36.contain) {
 					_this36.centerImage(cloneImage);
 				} else {
@@ -5522,9 +5188,6 @@ var FullImage = (function () {
 			}
 
 			this.goTo(this.currentImage);
-
-			// this.images[this.currentImage].classList.add('active');
-			// this.images[this.previousImage].classList.remove('active');
 		}
 	}, {
 		key: 'preImage',
@@ -5544,9 +5207,6 @@ var FullImage = (function () {
 			}
 
 			this.goTo(this.currentImage);
-
-			// this.images[this.currentImage].classList.add('active');
-			// this.images[this.previousImage].classList.remove('active');
 		}
 	}, {
 		key: 'centerImage',
@@ -5788,21 +5448,6 @@ var BlogList = (function () {
 	}
 
 	// new BlogList(document.body);
-
-	/* Twitter fetcher
- ----------------------------------------------------------------------*/
-	/*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-	/*********************************************************************
- *  #### Twitter Post Fetcher v15.0.1 ####
- *  Coded by Jason Mayes 2015. A present to all the developers out there.
- *  www.jasonmayes.com
- *  Please keep this disclaimer with my code if you use it. Thanks. :-)
- *  Got feedback or questions, ask here:
- *  http://www.jasonmayes.com/projects/twitterApi/
- *  Github: https://github.com/jasonmayes/Twitter-Post-Fetcher
- *  Updates will be posted to this site.
- *********************************************************************/
-
 	/* send request to get list */
 
 	_createClass(BlogList, [{
@@ -5947,64 +5592,8 @@ var BlogList = (function () {
 		} };return window.twitterFetcher = L;
 });
 
-/**
- * ### HOW TO CREATE A VALID ID TO USE: ###
- * Go to www.twitter.com and sign in as normal, go to your settings page.
- * Go to "Widgets" on the left hand side.
- * Create a new widget for what you need eg "user time line" or "search" etc.
- * Feel free to check "exclude replies" if you don't want replies in results.
- * Now go back to settings page, and then go back to widgets page and
- * you should see the widget you just created. Click edit.
- * Look at the URL in your web browser, you will see a long number like this:
- * 345735908357048478
- * Use this as your ID below instead!
- */
 
-/**
- * How to use TwitterFetcher's fetch function:
- *
- * @function fetch(object) Fetches the Twitter content according to
- *     the parameters specified in object.
- *
- * @param object {Object} An object containing case sensitive key-value pairs
- *     of properties below.
- *
- * You may specify at minimum the following two required properties:
- *
- * @param object.id {string} The ID of the Twitter widget you wish
- *     to grab data from (see above for how to generate this number).
- * @param object.domId {string} The ID of the DOM element you want
- *     to write results to.
- *
- * You may also specify one or more of the following optional properties
- *     if you desire:
- *
- * @param object.maxTweets [int] The maximum number of tweets you want
- *     to return. Must be a number between 1 and 20. Default value is 20.
- * @param object.enableLinks [boolean] Set false if you don't want
- *     urls and hashtags to be hyperlinked.
- * @param object.showUser [boolean] Set false if you don't want user
- *     photo / name for tweet to show.
- * @param object.showTime [boolean] Set false if you don't want time of tweet
- *     to show.
- * @param object.dateFunction [function] A function you can specify
- *     to format date/time of tweet however you like. This function takes
- *     a JavaScript date as a parameter and returns a String representation
- *     of that date.
- * @param object.showRetweet [boolean] Set false if you don't want retweets
- *     to show.
- * @param object.customCallback [function] A function you can specify
- *     to call when data are ready. It also passes data to this function
- *     to manipulate them yourself before outputting. If you specify
- *     this parameter you must output data yourself!
- * @param object.showInteraction [boolean] Set false if you don't want links
- *     for reply, retweet and favourite to show.
- * @param object.showImages [boolean] Set true if you want images from tweet
- *     to show.
- * @param object.lang [string] The abbreviation of the language you want to use
- *     for Twitter phrases like "posted on" or "time ago". Default value
- *     is "en" (English).
- */
+
 
 /* Sub menu
 ----------------------------------------------------------------------*/
@@ -6282,8 +5871,6 @@ function disableVideoSound(elem) {
 // on popstate page
 function popstatePage() {
 	window.onpopstate = function (event) {
-		// console.log(("location: " + document.location + ", state: " + JSON.stringify(event.state)));
-
 		if (pages.isAnimate) {
 			event.preventDefault();
 		}
@@ -6397,10 +5984,6 @@ function mainScroll() {
 
 // load all static ajax page
 function loadAllStaticAjaxPage() {
-	// вибрати усі aside-menu або ajax-menu
-	// знайти елемент з класом active або перший елемент
-	// послати запит на завантаження сторінки
-	// створти і завантажити сторінку
 	var ajaxPage = document.querySelectorAll('.ajax-page');
 	if (ajaxPage.length > 0) {
 		arrProto.forEach.call(ajaxPage, function (page) {
@@ -6410,13 +5993,10 @@ function loadAllStaticAjaxPage() {
 			}
 
 			var ajaxMenu = page.querySelector('.ajax-menu');
-
 			if (!ajaxMenu) {
 				return false;
 			}
-
 			var contentPage = ajaxMenu.parentNode;
-
 			if (!contentPage) {
 				return false;
 			}
@@ -6492,12 +6072,6 @@ function scaleMenuBlocks() {
 	var scaleNavBg = function scaleNavBg() {
 
 		var scaleF = function scaleF(block, scaleBlock) {
-
-			// if ( window.innerWidth < 992 ) {
-			// 	transform( scaleBlock, 'scale(' + 1 + ')' );
-			// 	return false;
-			// }
-
 			var navW = undefined,
 			    navH = undefined,
 			    wW = window.innerWidth;
@@ -6787,11 +6361,6 @@ function scaleMenuBlocks() {
 					topBtn.classList.remove('hide');
 				}
 			});
-			// if( widgetBlockTop ) {
-			// 	widgetBlockTop.addEventListener('touchstart', ()=>{
-			// 		widgetLang.classList.remove('opened-lang');
-			// 	});
-			// }
 		})();
 
 		if (typeof _ret2 === 'object') return _ret2.v;
@@ -6826,15 +6395,6 @@ function scaleMenuBlocks() {
 					topBtn.classList.remove('hide');
 				}
 			};
-
-			// navigationBlock.addEventListener('touchstart', ( event ) => {
-			// 	event.stopPropagation();
-			// 	widgetSearch.classList.remove('opened-search');
-			// 	if( topBtn ) {
-			// 		topBtn.classList.remove('hide');
-			// 	}
-			// });
-
 			if (widgetBlockTop) {
 				widgetBlockTop.addEventListener('touchstart', function (event) {
 					event.stopPropagation();
@@ -6990,34 +6550,6 @@ function closeSignIn(target) {
 	}, 400);
 }
 
-/**
- * Social Likes
- * http://sapegin.github.com/social-likes
- *
- * Sharing buttons for Russian and worldwide social networks.
- *
- * @requires jQuery
- * @author Artem Sapegin
- * @copyright 2014 Artem Sapegin (sapegin.me)
- * @license MIT
- */
-
-/*global define:false, socialLikesButtons:false */
-
-/**
- * fix Twitter counter
- * Create account at OpenShareCount. http://opensharecount.com/
- * Add this script before you include social-likes.js:
- */
-var socialLikesButtons = {
-	twitter: {
-		counterUrl: 'https://opensharecount.com/count.json?url={url}&callback=?',
-		convertNumber: function convertNumber(data) {
-			return data.count;
-		}
-	}
-};
-
 (function (factory) {
 	// Try to register as an anonymous AMD module
 	if (typeof define === 'function' && define.amd) {
@@ -7035,104 +6567,7 @@ var socialLikesButtons = {
 	var protocol = location.protocol === 'https:' ? 'https:' : 'http:';
 	var isHttps = protocol === 'https:';
 
-	/**
-  * Buttons
-  */
-	var services = {
-		facebook: {
-			// https://developers.facebook.com/docs/reference/fql/link_stat/
-			counterUrl: 'https://graph.facebook.com/fql?q=SELECT+total_count+FROM+link_stat+WHERE+url%3D%22{url}%22&callback=?',
-			convertNumber: function convertNumber(data) {
-				return data.data[0].total_count;
-			},
-			popupUrl: 'https://www.facebook.com/sharer/sharer.php?u={url}',
-			popupWidth: 600,
-			popupHeight: 359
-		},
-		twitter: {
-			popupUrl: 'https://twitter.com/intent/tweet?url={url}&text={title}',
-			popupWidth: 600,
-			popupHeight: 250,
-			click: function click() {
-				// Add colon to improve readability
-				if (!/[\.\?:\-–—]\s*$/.test(this.options.title)) this.options.title += ':';
-				return true;
-			}
-		},
-		mailru: {
-			counterUrl: protocol + '//connect.mail.ru/share_count?url_list={url}&callback=1&func=?',
-			convertNumber: function convertNumber(data) {
-				for (var url in data) {
-					if (data.hasOwnProperty(url)) {
-						return data[url].shares;
-					}
-				}
-			},
-			popupUrl: 'https://connect.mail.ru/share?share_url={url}&title={title}',
-			popupWidth: 492,
-			popupHeight: 500
-		},
-		vkontakte: {
-			counterUrl: 'https://vk.com/share.php?act=count&url={url}&index={index}',
-			counter: function counter(jsonUrl, deferred) {
-				var options = services.vkontakte;
-				if (!options._) {
-					options._ = [];
-					if (!window.VK) window.VK = {};
-					window.VK.Share = {
-						count: function count(idx, number) {
-							options._[idx].resolve(number);
-						}
-					};
-				}
 
-				var index = options._.length;
-				options._.push(deferred);
-				$.getScript(makeUrl(jsonUrl, { index: index })).fail(deferred.reject);
-			},
-			popupUrl: 'https://vk.com/share.php?url={url}&title={title}',
-			popupWidth: 655,
-			popupHeight: 450
-		},
-		odnoklassniki: {
-			counterUrl: protocol + '//connect.ok.ru/dk?st.cmd=extLike&ref={url}&uid={index}',
-			counter: function counter(jsonUrl, deferred) {
-				var options = services.odnoklassniki;
-				if (!options._) {
-					options._ = [];
-					if (!window.ODKL) window.ODKL = {};
-					window.ODKL.updateCount = function (idx, number) {
-						options._[idx].resolve(number);
-					};
-				}
-
-				var index = options._.length;
-				options._.push(deferred);
-				$.getScript(makeUrl(jsonUrl, { index: index })).fail(deferred.reject);
-			},
-			popupUrl: 'https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl={url}',
-			popupWidth: 580,
-			popupHeight: 336
-		},
-		plusone: {
-			counterUrl: protocol + '//share.yandex.ru/gpp.xml?url={url}&callback=?',
-			convertNumber: function convertNumber(number) {
-				return parseInt(number.replace(/\D/g, ''), 10);
-			},
-			popupUrl: 'https://plus.google.com/share?url={url}',
-			popupWidth: 500,
-			popupHeight: 550
-		},
-		pinterest: {
-			counterUrl: protocol + '//api.pinterest.com/v1/urls/count.json?url={url}&callback=?',
-			convertNumber: function convertNumber(data) {
-				return data.count;
-			},
-			popupUrl: 'https://pinterest.com/pin/create/button/?url={url}&description={title}',
-			popupWidth: 740,
-			popupHeight: 550
-		}
-	};
 
 	/**
   * Counters manager
