@@ -357,11 +357,15 @@
   footer .flag ul li:hover{background: #fff; color: #222222; font-weight: 600; cursor: pointer;}
   footer .flag button{color: #ccc; width: 100%; height: 30px;}
   footer p{
-    text-align:center; line-height: 18px;
-    font-weight: 600; font-size: 12px;
+    text-align:center;
+    font-weight: 600; 
+    font-size: 12px;
     font-family: 'NanumGothic',sans-serif;
-    width: 40%; padding-top: 10px; color: #666666;
-    position: relative;  left: 50%;   transform: translateX(-50%);
+    padding-top: 10px;
+    color: #666666;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
 /* SNS */
