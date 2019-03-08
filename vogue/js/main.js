@@ -297,15 +297,33 @@ $(function(){
           $('.icon-top').removeClass('bottom');
         }
       }).scroll();
-    } else if(width >= 480 && width <= 767) {
+    } else if(width >= 360 && width <= 767) {
+      $('.icon-more').click(function(e){
+        e.preventDefault();
         $('#beauty-popup').off();
         $('.beauty a').off();
+      })
+
     }
   });
   $(window).resize();
 
+    var over=document.getElementById('over');
 
+    over.addEventListener('touchmove',touchEvent);
+    over.addEventListener('touchstart',touchEvent);
+    over.addEventListener('touchend',touchEvent);
 
+    function clearAllCookies(domain, path) {
+      var doc = document,
+          domain = domain || doc.domain,
+          path = path || '/',
+          cookies = doc.cookie.split(';'),
+          now = +(new Date);
+      for (var i = cookies.length - 1; i >= 0; i--) {
+        doc.cookie = cookies[i].split('=')[0] + '=; expires=' + now + '; domain=' + domain + '; path=' + path;
+      }
+    }
 
 
 // =============================================================================
