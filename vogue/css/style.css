@@ -358,7 +358,7 @@
   footer .flag button{color: #ccc; width: 100%; height: 30px;}
   footer p{
     text-align:center;
-    font-weight: 600; 
+    font-weight: 600;
     font-size: 12px;
     font-family: 'NanumGothic',sans-serif;
     padding-top: 10px;
@@ -655,7 +655,11 @@
     section{padding-top:80px;}
     article h2{display: none;}
     .btn-more{display: block; position: relative; left: 50%; transform: translateX(-50%); margin: 75px 0;}
-
+    @keyframes bg {
+      0%{filter:hue-rotate(0deg);}
+      100%{filter:hue-rotate(360deg);}
+      0%{filter:hue-rotate(0deg);}
+    }
 
     /* 메뉴*/
     .btn-menu *, nav{transition: 0.5s;}
@@ -721,7 +725,6 @@
       font-style: italic; text-align: center;
       font-weight: normal;
       width: 300px;
-
      }
     .main .swiper-container{left: 0; height: 100%;}
 
