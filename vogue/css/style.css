@@ -657,16 +657,9 @@
     .btn-more{display: block; position: relative; left: 50%; transform: translateX(-50%); margin: 75px 0;}
     @keyframes bg {
       0%{filter:hue-rotate(0deg);}
-      100%{filter:hue-rotate(360deg);}
-      0%{filter:hue-rotate(0deg);}
+      100%{filter:hue-rotate(360deg); opacity: 0;}
+
     }
-    .loading{
-      position: absolute;
-      top:50%; left:50%;
-      transform: translate(-50%,-50%);
-      height: 150px;
-    }
-    .loading h1{color:#222; letter-spacing: 10px;}
 
     /* 메뉴*/
     .btn-menu *, nav{transition: 0.5s;}
