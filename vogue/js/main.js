@@ -308,22 +308,11 @@ $(function(){
   });
   $(window).resize();
 
-    var over=document.getElementById('over');
+    function delCookie(cookie_name) {
 
-    over.addEventListener('touchmove',touchEvent);
-    over.addEventListener('touchstart',touchEvent);
-    over.addEventListener('touchend',touchEvent);
+    set_cookie(cookie_name, "", 0 , 0);
 
-    function clearAllCookies(domain, path) {
-      var doc = document,
-          domain = domain || doc.domain,
-          path = path || '/',
-          cookies = doc.cookie.split(';'),
-          now = +(new Date);
-      for (var i = cookies.length - 1; i >= 0; i--) {
-        doc.cookie = cookies[i].split('=')[0] + '=; expires=' + now + '; domain=' + domain + '; path=' + path;
-      }
-    }
+}
 
 
 // =============================================================================
