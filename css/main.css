@@ -1600,6 +1600,7 @@ div.page-figure.in-content {padding: 0 15px;}
 
   body.dark .aside-menu li a:active, body.dark .aside-menu li a:focus, body.dark .aside-menu li a:hover, body.dark .aside-menu li a:visited {
     color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
   }
 
   body.light .aside-menu li a.active, body.light .aside-menu li a:active, body.light .aside-menu li a:focus, body.light .aside-menu li a:hover, body.light .aside-menu li a:visited {
