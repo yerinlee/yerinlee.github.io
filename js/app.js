@@ -470,40 +470,6 @@ document.addEventListener('DOMContentLoaded', function () {
   */
 	// try {
 	gallery = new Gallery();
-	// } catch ( e ) {
-	// 	console.error( 'Gallery problem: ' + e );
-	// }
-
-	// /**
- 	//  * Init accordeon
- 	// //  */
-	// try {
-	// 	var accordeon = new Accordeon({
-	// 		scroll: scroll
-	// 	});
-	// } catch (e) {
-	// 	console.error('Accordeon problem: ' + e);
-	// }
-
-	/**
-  * Google Map
-  */
-	try {
-		var gMap = document.querySelector('.map');
-		googleMap = new GoogleMap(gMap);
-	} catch (e) {
-		console.error(e);
-	}
-
-	centerImage({
-		block: document.body,
-		nameClass: '.body-bg'
-	});
-
-	centerImage({
-		block: document.body,
-		nameClass: '.blog-post-bg'
-	});
 
 	// main scroll
 	mainScroll();
@@ -517,6 +483,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	// iframe width and height
 	iframeSize();
 
-	// onpopstate
-	// popstatePage();
 }, false);

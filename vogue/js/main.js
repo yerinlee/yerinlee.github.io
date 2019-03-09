@@ -1,8 +1,8 @@
 $(function(){
 
-
+$('main-preloader').hide();
   $('img').on('load',function(){
-    $('.bg').fadeOut(500);
+    $('.main-preloader').fadeOut(500);
   })
 
   //메인==================================================================================
@@ -298,21 +298,15 @@ $(function(){
         }
       }).scroll();
     } else if(width >= 360 && width <= 767) {
-      $('.icon-more').click(function(e){
-        e.preventDefault();
+      // $(".click").on('click', function(e){
+      //   e.stopPropagation();
+      // }
+
         $('#beauty-popup').off();
         $('.beauty a').off();
-      })
-
     }
   });
   $(window).resize();
-
-    function delCookie(cookie_name) {
-
-    set_cookie(cookie_name, "", 0 , 0);
-
-}
 
 
 // =============================================================================

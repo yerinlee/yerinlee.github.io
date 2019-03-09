@@ -931,18 +931,10 @@ var Video = (function () {
 	}, {
 		key: 'closeVideo',
 		value: function closeVideo() {
-			// this.copyVideo.classList.remove('opened');
-			// if( this.target ) {
-			//   this.target.classList.remove('loading');
-			// }
-			// setTimeout(()=>{
-
 			this.wrapper.parentNode.removeChild(this.wrapper);
 			this.video.controls = false;
 			this.parentVideo.appendChild(this.video);
 			iframeSize();
-
-			// },300);
 		}
 	}]);
 
