@@ -1,6 +1,5 @@
 $(function(){
 
-$('main-preloader').hide();
   $('img').on('load',function(){
     $('.main-preloader').fadeOut(500);
   })
@@ -298,10 +297,7 @@ $('main-preloader').hide();
         }
       }).scroll();
     } else if(width >= 360 && width <= 767) {
-      // $(".click").on('click', function(e){
-      //   e.stopPropagation();
-      // }
-
+      $(".beauty a").attr('onclick','').unbind('click'); 
         $('#beauty-popup').off();
         $('.beauty a').off();
     }
