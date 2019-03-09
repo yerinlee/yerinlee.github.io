@@ -624,96 +624,23 @@
 
 
 
-  /* .bg{
+  .bg{
     position: fixed;
     width: 100%; height: 100%;
     z-index: 100;
     background: #fff;
+  }
 
-    animation: bg 10s infinite;
-  }
-  @keyframes bg {
-    0%{filter:hue-rotate(0deg);}
-    100%{filter:hue-rotate(360deg);}
-  }
   .loading{
     position: absolute;
     top:50%; left:50%;
     transform: translate(-50%,-50%);
     height: 150px;
   }
-  .loading h1{color:#222; letter-spacing: 10px;} */
+  .loading h1{color:#222; letter-spacing: 10px;}
 
-  .main-preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 123456789 !important;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-  }
 
-  .main-preloader .ball-scale {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
 
-  .main-preloader.window-is-loaded {opacity: 0;}
-
-  @-webkit-keyframes ball-scale {
-    0% {-webkit-transform: scale(0); transform: scale(0);}
-    100% {-webkit-transform: scale(1); transform: scale(1); opacity: 0;}
-  }
-  @keyframes ball-scale {
-    0% {-webkit-transform: scale(0); transform: scale(0);}
-    100% {-webkit-transform: scale(1); transform: scale(1); opacity: 0;}
-  }
-
-  .ball-scale > div {
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    margin: 2px;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
-    animation: ball-scale 1s 0s ease-in-out infinite;
-  }
-
-  @keyframes ball-scale {
-    0% {-webkit-transform: scale(0); transform: scale(0);}
-    100% {-webkit-transform: scale(1); transform: scale(2); opacity: 0;}
-  }
-  @keyframes ball-scale-notransform {
-    0% {width: 0; height: 0;}
-    100% {width: 60px; height: 60px; opacity: 0;}
-  }
-
-  .ball-scale > div {
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    margin: 2px;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
-    animation: ball-scale 1s 0s ease-in-out infinite;
-  }
 
 
 

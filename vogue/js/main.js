@@ -1,7 +1,7 @@
 $(function(){
 
   $('img').on('load',function(){
-    $('.main-preloader').fadeOut(500);
+    $('.bg').fadeOut(1000);
   })
 
   //메인==================================================================================
@@ -297,7 +297,7 @@ $(function(){
         }
       }).scroll();
     } else if(width >= 360 && width <= 767) {
-      $(".beauty a").attr('onclick','').unbind('click'); 
+        $(".beauty a").attr('onclick','').unbind('click');
         $('#beauty-popup').off();
         $('.beauty a').off();
     }
