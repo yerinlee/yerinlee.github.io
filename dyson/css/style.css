@@ -29,10 +29,9 @@ header{
   position: fixed;
   z-index: 10;
   color: #eee;
-  padding: 0 360px;
 }
 
-.top-area{position:relative; height: 100%; width: 1200px;}
+.top-area{position:absolute; height: 100%; width:1200px; margin-left: 360px;}
 .top-area h1{padding: 40px 0; width: 60px;}
 .login{position: absolute; top: 20px; right: 200px;}
 .login li{display: inline-block; padding-right: 5px; font-size: 14px;}
@@ -47,9 +46,10 @@ header{
   font-size: 13px;
 }
 
-nav{position: fixed; top:60px; padding: 0 285px; box-sizing: border-box;}
+nav{position: fixed; top:55px; margin : 0 530px;}
+nav ul.gnb{margin: 0 auto; width: 1200px;}
 nav ul.gnb li{float: left; padding-right: 50px; }
-nav ul.gnb li a{ display: block; text-align: center; font-size: 18px; color: #ccc;}
+nav ul.gnb li a{display: block; text-align: center; font-size: 18px; color: #ccc;}
 nav ul.gnb li a:hover{color: #fff;}
 
 /* section =================================================*/
@@ -60,19 +60,16 @@ article {position: relative;}
 /* article =================================================*/
 .text-box{
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 200px 250px 0 0;
-  width:500px;
+  top: 200px;
+  font-size: 20px;
+  width: 500px;
   height: 500px;
   background: rgba(225, 225, 225, 0.5);
-  font-size: 20px;
 }
 .text-box img{padding: 70px 70px 0;}
 .text-box span{padding: 60px 80px 30px;}
-.text-box p{padding: 0 80px; text-align: justify;}
+.text-box p{padding: 0 80px; }
 .text-box a{padding: 50px 80px;}
-
 
 .main{
   position: relative; top: 0;
@@ -88,20 +85,23 @@ article {position: relative;}
   padding: 0 360px;
   color: #fff;
   opacity: 0.8;
+  width: 100%;
 }
-.main .text h3{font-size: 50px; padding-bottom: 50px;}
+.main .text h3{font-size: 50px; padding-bottom: 50px; }
 .main .text p{font-size: 20px; line-height: 30px; padding-bottom: 50px;}
 .main .text a{font-weight: 400; font-size: 20px; color: #fff;}
 
-.product1 h3{padding: 50px; text-align: center; font-size: 22px;}
+.product1 .wrap{width: 100%; margin: 0 auto; position: relative;}
+.product1 h3{margin: 50px auto; text-align: center; font-size: 22px;  width: 1200px;}
 .product1 .text-box img{padding: 70px 60px 0;}
-.product2 .text-box{left:0; margin: 100px 0 0 360px;}
-.product3 .text-box{margin: 100px 250px;}
-.product3 .text-box p{text-align: left;}
+.product1 .text-box{ margin-left: 1060px;}
+.product2 .text-box{left: 0; margin-left: 360px;}
+.product3 .text-box{margin-left: 1060px; top: 100px;}
 
+.details{margin-bottom: 150px; width: 100%;}
+.detail-wrap{margin: 0 auto; width: 1200px;}
 .detail-wrap li a{position: relative;}
-.detail-wrap li{display: inline-block; margin-right: 20px; position: relative; width: 380px; height: 380px;}
-.detail-wrap li:nth-child(1){padding: 0 0 100px 360px;}
+.detail-wrap li{display: inline-block; margin-right: 10px; position: relative; width: 380px; height: 380px;}
 .detail-wrap .over{
   position: absolute;
   top:0;
@@ -119,7 +119,7 @@ article {position: relative;}
 .detail-wrap a:hover .over{opacity: 1;}
 
 .info {height: 140px;}
-.info .text{position: absolute; right: 0; padding: 40px 20px 40px 40px; font-weight: 600;}
+.info .text{margin-left: 1300px; width: 540px; padding: 40px 20px 40px 40px; font-weight: 600;}
 .info .text p{float: left; margin-right: 20px;}
 .info .text p span{font-size: 24px;}
 
@@ -128,11 +128,10 @@ article {position: relative;}
 
 /* footer =================================================*/
 footer{height: 180px; border-top: 1px solid #ccc; position: relative;}
-footer .ft-menu .wrap{padding-top: 80px;}
-footer .menu{padding: 0 360px 25px;}
+footer .wrap{width: 1200px; margin-top: 80px;}
+footer .menu{width: 100%; padding: 0 360px 25px;}
 footer .menu li{float: left; padding:0 10px; font-size: 12px; border-right: 1px solid #ccc;}
-footer p{padding: 20px 360px; text-align: center;}
-
+footer p{margin-top: 20px; text-align: center; width: 1200px; margin-left: 360px;}
 footer .lang button{padding-left: 10px;}
 footer .flag{position: absolute; top: 10px; left: 30px;}
 footer .flag ul{ position: absolute; bottom: 30px; width: 140px; font-size: 14px; font-weight: 600; display: none;}
@@ -145,7 +144,7 @@ footer .flag ul li{
   background: #fff;
 }
 footer .flag ul li:hover{background: #222; color: #ccc;}
-
+footer .ft-info{width: 1200px;}
 .top{
   position: fixed;
   bottom:30px;
