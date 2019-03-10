@@ -101,7 +101,8 @@ article {position: relative;}
 .details{margin-bottom: 150px; width: 100%;}
 .detail-wrap{margin: 0 auto; width: 1200px;}
 .detail-wrap li a{position: relative;}
-.detail-wrap li{display: inline-block; margin-right: 10px; position: relative; width: 380px; height: 380px;}
+.detail-wrap li{display: inline-block; margin-right: 24px; position: relative; width: 380px; height: 380px;}
+.detail-wrap li:nth-child(3){margin-right: 0;}
 .detail-wrap .over{
   position: absolute;
   top:0;
