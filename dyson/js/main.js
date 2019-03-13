@@ -2,7 +2,7 @@ $(function(){
 
 
   // 로그인 팝업  =================v=========================
-   $('.login li a:nth-child(1)').click(function(){
+   $('.login .log').click(function(){
      $('#login-popup').fadeIn();
      $('.bg').fadeIn();
    })
@@ -35,13 +35,13 @@ $(function(){
        $('.bg').fadeOut();
        $('#login-popup').fadeOut(500,function(){
          $('#my-page-popup').fadeIn();
-         $('.login li a:nth-child(1)').text('Logout');
+         $('.login .log').text('Logout');
          $('.login .join').text('My page');
        })
      }
    })
-    $('.login li a:nth-child(1)').click(function(){
-      $('.login li a:nth-child(1)').text('Login');
+    $('.login .log').click(function(){
+      $('.login .log').text('Login');
       $('.login .join').text('Join');
     })
 
