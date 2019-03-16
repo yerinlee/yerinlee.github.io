@@ -282,7 +282,6 @@ $(function(){
   $(window).resize(function() {
   var width = $(window).width();
   var scrollTop=$(this).scrollTop();
-  var width = $(window).width();
     if(width >= 360 && width <= 1024) {
       var nav=$(window).height();
       var toparea=$('.top-area').height()

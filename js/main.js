@@ -3,7 +3,7 @@ $(function() {
         var index = 0,
             count = 0;
         var word = '';
-        var words = ["Graphic", "Branding", "Package", "Edit design ","Web design","Web publishing"];
+        var words = ["#Branding", "#Package", "#Edit design ","#Web design","#Web publishing", "#Graphic"];
         untype();
 
         function type(word) {
@@ -76,6 +76,6 @@ $(function() {
                }
             });
 
-    
+
 
 });
