@@ -1008,6 +1008,11 @@ body.light .cospo-page.ajax-page-mobile{background-color: #fff;}
 section.cospo-page:first-child{margin-top: 0;}
 
 
+@media (min-width: 768px) and (max-width: 991px){
+  .main-overlay{width: 100% !important;}
+  .cospo-page {padding: 0 30px;}
+}
+
 /* Pages common ======================================================================*/
 
 @media (max-width: 767px) {
@@ -1123,8 +1128,6 @@ body.light {background-color: #fff;}
   height: 100%;
   table-layout: fixed;
   width: 100%;
-  position: absolute;
-  left: -10px;
 }
 
 .content-center > div {display: table-cell; vertical-align: middle;}
@@ -1614,7 +1617,6 @@ div.page-figure.in-content {padding: 0 15px;}
 
 
   /* work-gallery */
-
   .work-gallery{position: relative; }
   .work-gallery img{transition: 0.5s;}
   .work-gallery ul li{padding-bottom: 15px; padding-right: 5px;}
@@ -1684,11 +1686,10 @@ div.page-figure.in-content {padding: 0 15px;}
   .img-wrap:hover div:before, .img-wrap:hover div:after,
   .img-wrap.hover div:after {opacity: 0.1;}
 
-
-  @media (min-width: 768px) and (max-width: 991px){
-  .main-overlay{width: 100% !important;}
-  .cospo-page {padding: 0 30px;}
+  @media (max-width: 991px){
+    .img-wrap h3{margin-top: 50px !important;}
   }
+
   @media (min-width: 992px) and (max-width: 1024px){
     .img-wrap h3{margin-top: 0 ; font-size: 1.2em;}
     .img-wrap p{margin-top: 0; font-size: 0.75em;}
@@ -1818,8 +1819,6 @@ div.page-figure.in-content {padding: 0 15px;}
   body {position: absolute; width: 100%;}
 }
 
-/* Large device */
-
 
 .ajax-menu .gallery li a {
   -webkit-transition: opacity 0.2s ease;
@@ -1833,7 +1832,7 @@ div.page-figure.in-content {padding: 0 15px;}
 @media (max-width: 991px) {
   .cospo-gallery {
     margin: 40px -60px 20px;
-    padding: 0;
+    padding: 10px 0;
     background: rgba(8, 8, 8, 0.8);
   }
 
@@ -2091,7 +2090,7 @@ ul.gallery-services.aside-menu li a.loading:before {content: '';}
 
   .ajax-gallery-title div h2 {margin-bottom: 50px;}
   .ajax-page .content {padding-right: 0;}
-  .ajax-menu {padding-left: 0;}
+  .ajax-menu {padding-left: 0; position: relative; top: 40%;}
   .ajax-menu .wrapper-scroll {margin-left: 0 !important;}
   .ajax-content {padding: 0;}
   .ajax-content .ajax-gallery-title {
