@@ -88,6 +88,7 @@ $(function(){
     }else {
       $('#btn-submit').show();
       $('#login-popup').fadeOut(500,function(){
+        $('.user-info span').text(id);
         $('#my-page-popup').fadeIn();
       })
     }
