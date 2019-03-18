@@ -288,14 +288,15 @@ $(function(){
       var toparea=$('.top-area').height()
       var gnb=nav - toparea;
       $('nav').height(gnb);
-      $(window).scroll(function(){
-        var bottomTop=$(document).height()-$(window).height()-150;
-        if(scrollTop > bottomTop){
+
+        var bottomTop=$(document).height()-$(window).height()-100;
+        if(scrollTop>bottomTop){
           $('.icon-top').addClass('bottom');
         }else{
           $('.icon-top').removeClass('bottom');
         }
-      }).scroll();
+
+
     } else if(width >= 360 && width <= 767) {
         $(".beauty a").attr('onclick','').unbind('click');
         $('#beauty-popup').off();
