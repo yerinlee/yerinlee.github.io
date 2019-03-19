@@ -148,7 +148,6 @@ ul li:before {
 }
 
 ul.margin-bottom-0 > li {margin-bottom: 0;}
-
 ul.no-checkmark > li:before {background-image: none !important;}
 
 p, h1 span,
@@ -2015,8 +2014,11 @@ ul.gallery-services.aside-menu li a.loading:before {content: '';}
   .ajax-gallery-title div {padding-bottom: 0;}
 }
 @media (min-width: 768px) {
-  .cospo-page .scroll{overflow-y: auto;}
+
   .cospo-page > .page-figure div{padding-left: 60px;}
+}
+@media (min-width: 998px) {
+  .cospo-page .scroll{overflow-y: auto;}
 }
 
 
