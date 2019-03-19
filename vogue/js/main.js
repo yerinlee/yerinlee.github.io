@@ -1,5 +1,5 @@
 $(function(){
-  $('img').on('load',function(){
+  $(window).on('load',function(){
     $('.bg').fadeOut();
   })
 
@@ -95,7 +95,7 @@ $(function(){
 
   // 로그인 완료한 후
   $('#my-page-popup .btn-toggle').click(function(){
-    $('#my-page-popup').toggleClass('open');
+    $('#my-page-popup').toggleClass('close');
   });
 
   $('#btn-logout').click(function(){
